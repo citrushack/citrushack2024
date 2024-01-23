@@ -9,8 +9,21 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ["var(--font-poppins)"],
+        racing: ["var(--font-racing)", "sans-serif"],
       },
       colors: {
+        citrus: {
+          "gray-100": "#A7A7A7",
+          "gray-200": "#3E3E3E",
+          "beige-100": "#FFF8EA",
+          "beige-200": "#F5E9CF",
+          orange: "#FF753A",
+          "green-100": "#30503D",
+          "green-200": "#8AB8AB",
+          red: "#E13636",
+          yellow: "#FFB800",
+          teal: "#00F3D6",
+        },
         hackathon: {
           "blue-100": "#38A3A5",
           "blue-200": "#22577A",
