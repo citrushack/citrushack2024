@@ -1,0 +1,42 @@
+name: Sync Changes from Template
+on:
+  schedule:
+    # Run at 6:00 AM every two days
+    - cron: "0 6 */2 * *"
+
+jobs:
+  sync-from-template:
+    # don't run this job on the template
+    if: github.repository != 'acm-ucr/hackathon-website'
+    name: Sync changes from acm-ucr/hackathon-website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Current Repo
+        uses: actions/checkout@v3
+        with:
+          path: ${{ github.repository }}
+          token: ${{ secrets.WORKFLOW_TOKEN }}
+
+      - name: Fetch all
+        working-directory: ${{ github.repository }}
+        run: |
+          git remote add template https://github.com/acm-ucr/hackathon-website
+          git fetch --all
+
+      - name: Checkout and push Template Dev Branch
+        working-directory: ${{ github.repository }}
+        run: |
+          current_date=$(date '+%m/%d/%Y')
+          git checkout -b sync-template-$current_date template/dev
+          git push origin sync-template-$current_date
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create New Pull Request
+        working-directory: ${{ github.repository }}
+        run: |
+          current_date=$(date '+%m/%d/%Y')
+          gh pr create --base dev --head sync-template-$current_date --title "Sync Template Changes $current_date" --body "Syncing template changes from $current_date"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
