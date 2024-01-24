@@ -8,16 +8,16 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        rolling: "rolling 25s linear infinite",
-        "rolling-reverse": "rolling-reverse 25s linear infinite",
+        rolling: "rolling 20s linear infinite",
+        "rolling-reverse": "rolling-reverse 20s linear infinite",
       },
       keyframes: {
         rolling: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
         "rolling-reverse": {
-          "0%": { transform: "translateX(-50%)" },
+          "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0%)" },
         },
       },

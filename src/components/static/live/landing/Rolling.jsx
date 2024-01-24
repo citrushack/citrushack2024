@@ -6,7 +6,7 @@ const RollingText = ({ children, repeat = 6, reverse = false }) => {
       }`}
     >
       {Array.from({ length: repeat }, (_, i) => (
-        <div className="m-3 w-fit" key={i}>
+        <div className="w-fit" key={i}>
           {children}
         </div>
       ))}
