@@ -1,15 +1,16 @@
 export const CONFIG = {
-  name: "HACKATHON",
-  email: "contact.acmucr@gmail.com",
+  name: "CITRUSHACK",
+  email: "citrushack@gmail.com",
   year: "2024",
-  date: new Date("November 4, 2023 9:00:00"),
-  packet: "",
+  date: new Date("April 4, 2024 9:00:00"),
+  packet:
+    "https://drive.google.com/file/d/1E6qo1jdD_bWhyTYzqcJ_7dnxmtwrJo_V/view?usp=sharing",
 };
 
 export const MANIFEST = {
-  name: "Hackathon Site",
-  short_name: "Hackathon Site",
-  description: "Hackathon Site",
+  name: "Citrushack Site",
+  short_name: "Citrushack Site",
+  description: "Citrushack Site",
   start_url: "/",
 };
 
