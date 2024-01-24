@@ -23,9 +23,8 @@ const Landing = () => {
               Apply
             </Link>
             <Link
-              target="_blank"
               className="px-8 py-2 text-citrus-gray-200 text-2xl font-racing hover:-translate-y-1 duration-200 transform-gpu"
-              href={process.env.NEXT_PUBLIC_SPONSORSHIP}
+              href="/form/sponsor"
             >
               Sponsor
             </Link>
