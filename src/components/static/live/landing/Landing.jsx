@@ -39,7 +39,7 @@ const Landing = () => {
           <div className="flex">
             <Link
               className="px-8 py-2 bg-citrus-orange text-2xl font-racing hover:bg-citrus-yellow hover:-translate-y-1 duration-200 transform-gpu"
-              href="/form"
+              href="/form/participant"
             >
               Apply
             </Link>
