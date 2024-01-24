@@ -47,6 +47,7 @@ const Form = ({
                 setObject={setObject}
                 fields={fields}
                 onSubmit={onSubmit}
+                packet={true}
                 setState={setState}
               />
             ) : (
