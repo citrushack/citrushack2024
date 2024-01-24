@@ -7,6 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        rolling: "rolling 25s linear infinite",
+        "rolling-reverse": "rolling-reverse 25s linear infinite",
+      },
+      keyframes: {
+        rolling: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "rolling-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+      },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
         racing: ["var(--font-racing)", "sans-serif"],
