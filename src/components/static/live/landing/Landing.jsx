@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import logo from "@/public/LOGO.svg";
 import year from "@/public/2024.svg";
@@ -7,8 +8,11 @@ import Countdown from "./CountDown";
 import Link from "next/link";
 import RollingText from "./Rolling";
 import arrow from "@/public/svg/landing/arrow.svg";
+import { signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 const Landing = () => {
+  const { data: session } = useSession();
   return (
     <div className="w-full relative flex flex-col lg:flex-row justify-between min-h-[70vh]">
       <div className="absolute overflow-hidden top-0 w-full z-0">
@@ -47,12 +51,31 @@ const Landing = () => {
           </div>
           <Countdown />
           <div className="flex">
-            <Link
-              className="px-8 py-2 bg-citrus-orange text-lg lg:text-2xl font-racing hover:bg-citrus-yellow hover:-translate-y-1 duration-200 transform-gpu"
-              href="/form/participant"
-            >
-              Apply
-            </Link>
+            {session?.user.roles.participants !== 1 &&
+              session?.user.roles.participants !== 0 && (
+                <Link
+                  className="px-8 py-2 bg-citrus-orange text-lg lg:text-2xl font-racing hover:bg-citrus-yellow hover:-translate-y-1 duration-200 transform-gpu"
+                  href="/form/participant"
+                >
+                  Apply
+                </Link>
+              )}
+            {session && (
+              <div
+                className="px-8 py-2 bg-citrus-orange text-lg lg:text-2xl font-racing hover:bg-citrus-yellow hover:-translate-y-1 duration-200 transform-gpu"
+                onClick={signOut}
+              >
+                Sign Out
+              </div>
+            )}
+            {session?.user.roles.participants !== 1 && (
+              <div
+                className="cursor-pointer px-8 py-2 bg-transparent border-2 ml-3 border-citrus-orange hover:border-citrus-yellow text-lg lg:text-2xl font-racing hover:bg-citrus-yellow hover:-translate-y-1 duration-200 transform-gpu"
+                onClick={signIn}
+              >
+                Login
+              </div>
+            )}
             <Link
               className="px-8 py-2 text-citrus-gray-200 text-lg lg:text-2xl font-racing hover:-translate-y-1 duration-200 transform-gpu"
               href="/form/sponsor"
