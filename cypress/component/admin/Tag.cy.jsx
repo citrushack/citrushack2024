@@ -11,8 +11,8 @@ describe("Tag", () => {
     cy.get('[data-cy="Accept-tag"]').contains("Accept");
     cy.get('[data-cy="Accept-tag"]').should(
       "have.class",
-      "bg-hackathon-tags-green-bg",
-      "text-hackathon-tags-green-text",
+      "bg-citrus-green-100/30",
+      "text-citrus-green-200",
       "hover:shadow-[inset_0px_0px_0px_2px_#00AFB9]"
     );
     cy.get('[data-cy="Accept-tag"]')
@@ -29,9 +29,9 @@ describe("Tag", () => {
     cy.get('[data-cy="Pending-tag"]').contains("Pending");
     cy.get('[data-cy="Pending-tag"]').should(
       "have.class",
-      "bg-hackathon-tags-yellow-bg",
-      "text-hackathon-tags-yellow-text",
-      "hover:shadow-[inset_0px_0px_0px_2px_#FFB81C]"
+      "bg-citrus-yellow/20",
+      "text-citrus-yellow",
+      "hover:shadow-[inset_0px_0px_0px_2px_#FFB800]"
     );
     cy.get('[data-cy="Pending-tag"]')
       .click()
@@ -47,9 +47,9 @@ describe("Tag", () => {
     cy.get('[data-cy="Reject-tag"]').contains("Reject");
     cy.get('[data-cy="Reject-tag"]').should(
       "have.class",
-      "bg-hackathon-tags-red-bg",
-      "text-hackathon-tags-red-text",
-      "hover:shadow-[inset_0px_0px_0px_2px_#F07167]"
+      "bg-citrus-red/20",
+      "text-citrus-red",
+      "hover:shadow-[inset_0px_0px_0px_2px_#E13636]"
     );
     cy.get('[data-cy="Reject-tag"]')
       .click()
@@ -72,11 +72,9 @@ describe("Tag", () => {
     cy.get('[data-cy="Accept-tag"]').contains("Accept");
     cy.get('[data-cy="Accept-tag"]').should(
       "have.class",
-      "bg-hackathon-tags-green-bg",
-      "text-hackathon-tags-green-text",
-      "border-2",
-      "border-black",
-      "hover:shadow-[inset_0px_0px_0px_2px_#00AFB9]"
+      "bg-citrus-green-100/30",
+      "text-citrus-green-200",
+      "hover:shadow-[inset_0px_0px_0px_2px_#30503D]"
     );
     cy.get('[data-cy="Accept-tag"]')
       .click()
@@ -91,8 +89,8 @@ describe("Tag", () => {
     cy.get('[data-cy="Accept-tag"]').contains("Accept");
     cy.get('[data-cy="Accept-tag"]').should(
       "have.class",
-      "bg-hackathon-tags-green-bg",
-      "text-hackathon-tags-green-text"
+      "bg-citrus-green-100/30",
+      "text-citrus-green-200"
     );
     cy.get('[data-cy="Accept-tag"]').should(
       "not.have.class",

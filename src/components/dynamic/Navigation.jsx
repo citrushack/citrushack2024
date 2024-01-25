@@ -8,6 +8,7 @@ import { TABS } from "@/data/dynamic/Navigation";
 import { usePathname } from "next/navigation";
 import { CONFIG } from "@/data/Config";
 import { BiSolidDownArrow } from "react-icons/bi";
+import { MdMenu } from "react-icons/md";
 
 const Navigation = () => {
   const [expand, setExpand] = useState(false);
@@ -16,20 +17,20 @@ const Navigation = () => {
 
   return (
     <>
-      <div className="flex lg:hidden w-full bg-citrus-green-100 h-12 items-center fixed z-20">
+      <div className="flex lg:hidden w-full bg-citrus-green-100 h-12 items-center fixed z-20 justify-between px-4">
         <div
           className="flex items-center hover:cursor-pointer w-full"
           onClick={() => setExpand(!expand)}
         >
-          <Image
-            src={LOGO}
-            className="w-full h-full mx-2"
-            alt={`${CONFIG.name} Logo`}
-          />
+          <Image src={LOGO} className="h-8 w-fit" alt={`${CONFIG.name} Logo`} />
           <div className="text-white text-xl font-semibold">
             {pathName.split("/")[2]}
           </div>
         </div>
+        <MdMenu
+          className="text-white text-3xl hover:cursor-pointer"
+          onClick={() => setExpand(!expand)}
+        />
       </div>
       <div
         className={`z-10 lg:flex lg:w-[12%] ${
