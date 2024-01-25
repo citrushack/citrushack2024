@@ -43,16 +43,18 @@ const Countdown = () => {
     <div className="bg-black rounded-lg p-2 w-full">
       <div className="border-4 rounded-lg border-citrus-beige-100 p-2 font-racing text-citrus-beige-100 py-3">
         <div className="flex items-center justify-between">
-          <Image src={flag} />
-          <div className="text-2xl mx-2">April 5th - 7 th 2024</div>
-          <Image src={flag} />
+          <Image src={flag} alt="flag" className="object-cover w-1/12 h-full" />
+          <div className="text-xl lg:text-2xl mx-2 whitespace-nowrap">
+            April 5th - 7 th 2024
+          </div>
+          <Image src={flag} alt="flag" className="object-cover w-1/12 h-full" />
         </div>
         <div className="gap-1 grid">
           <div className="bg-citrus-beige-100 h-[1px] w-full" />
           <div className="bg-citrus-beige-100 h-[2px] w-full" />
           <div className="bg-citrus-beige-100 h-[3px] w-full" />
         </div>
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-4 text-sm">
           <div className="flex items-center justify-center">DAYS</div>
           <div className="flex items-center justify-center">HOURS</div>
           <div className="flex items-center justify-center">MINUTES</div>
@@ -63,7 +65,7 @@ const Countdown = () => {
           {Object.entries(time).map(([text, value], index) => (
             <>
               <p
-                className="text-citrus-red text-5xl flex items-center justify-center"
+                className="text-citrus-red text-4xl lg:text-5xl flex items-center justify-center"
                 key={index}
               >
                 {parseInt(value / 10)}

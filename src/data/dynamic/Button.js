@@ -23,7 +23,7 @@ export const COLORS = {
 export const SIZES = {
   xs: "text-xs",
   sm: "text-sm",
-  md: "text-base",
+  lg: "text-base",
   lg: "text-lg",
   xl: "text-xl",
 };

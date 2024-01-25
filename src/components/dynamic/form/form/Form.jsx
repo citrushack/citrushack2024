@@ -31,7 +31,7 @@ const Form = ({
           color="green"
         />
       </div>
-      <div className="w-10/12 md:w-1/2 xl:w-1/3 my-5 ">
+      <div className="w-10/12 lg:w-1/2 xl:w-1/3 my-5 ">
         <p className="text-xl bg-hackathon-green-300 font-semibold px-4 py-2 rounded-t-xl m-0">
           {header}
         </p>

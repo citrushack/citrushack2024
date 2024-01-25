@@ -4,14 +4,14 @@ const Error = ({ code, error, message, dev }) => {
       <p className="text-center text-6xl font-extrabold text-hackathon-blue-100 m-0">
         {code}
       </p>
-      <p className="text-center text-lg md:text-2xl font-bold text-black m-0">
+      <p className="text-center text-lg lg:text-2xl font-bold text-black m-0">
         {error}
       </p>
-      <p className="text-center text-sm md:text-lg  text-hackathon-blue-200 m-0">
+      <p className="text-center text-sm lg:text-lg  text-hackathon-blue-200 m-0">
         {message}
       </p>
       {dev && (
-        <p className="text-center text-sm md:text-lg text-hackathon-blue-200 m-0">
+        <p className="text-center text-sm lg:text-lg text-hackathon-blue-200 m-0">
           Developer Notes: {dev}
         </p>
       )}
