@@ -44,7 +44,7 @@ const CheckinPage = () => {
             value={`${session.user.id}&${date.toISOString()}&${
               session.user.name
             }`}
-            className="w-2/3 h-2/3"
+            className="w-full h-full"
           />
         </div>
       </div>

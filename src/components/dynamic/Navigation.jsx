@@ -23,8 +23,8 @@ const Navigation = () => {
           onClick={() => setExpand(!expand)}
         >
           <Image src={LOGO} className="h-8 w-fit" alt={`${CONFIG.name} Logo`} />
-          <div className="text-white text-xl font-semibold">
-            {pathName.split("/")[2]}
+          <div className="text-citrus-green-200 font-racing text-xl font-semibold">
+            {pathName.split("/")[2].toUpperCase()}
           </div>
         </div>
         <MdMenu
