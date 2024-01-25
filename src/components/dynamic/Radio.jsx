@@ -27,7 +27,7 @@ const Radio = ({
         </div>
       )}
       {editable && (
-        <div className="grid grid-cols-2 lg:grid-cols-3 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-3 w-full">
           {Object.entries(options).map(([optionKey, option], index) => (
             <div
               data-cy={`radio-${option}`}
