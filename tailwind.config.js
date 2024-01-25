@@ -29,8 +29,8 @@ export const theme = {
     },
     colors: {
       citrus: {
-        "gray-200": "#A7A7A7",
-        "gray-100": "#3E3E3E",
+        "gray-100": "#A7A7A7",
+        "gray-200": "#3E3E3E",
         "beige-100": "#FFF8EA",
         "beige-200": "#F5E9CF",
         orange: "#FF753A",
