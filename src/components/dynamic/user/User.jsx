@@ -36,7 +36,7 @@ const User = ({ user, setUser, edit, setEdit }) => {
       });
   };
   return (
-    <div className="bg-white rounded-lg gap-3 flex flex-col m-2 max-h-[70vh] pb-4">
+    <div className="bg-citrus-beige-100 rounded-lg gap-3 flex flex-col m-2 max-h-[70vh] pb-4">
       <div className="gap-3 flex flex-col m-2 overflow-scroll h-[90%] p-4 bg-transparent">
         <Select
           title="School"
@@ -112,7 +112,7 @@ const User = ({ user, setUser, edit, setEdit }) => {
                       : [...user.diet, option],
                   })
                 }
-                color="bg-hackathon-green-300"
+                color="bg-citrus-green-100"
               />
             ))
           ) : user.diet.length > 0 ? (

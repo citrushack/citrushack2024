@@ -32,11 +32,15 @@ const CheckinPage = () => {
             className="rounded-full overflow-hidden"
             alt="Picture of user's profile"
           />
-          <p className="text-2xl font-bold">{session.user.name}</p>
+          <p className="text-2xl font-bold text-citrus-orange">
+            {session.user.name}
+          </p>
           <p className="text-base">{session.user.email}</p>
         </div>
-        <div className="bg-white w-2/3 h-1/3 lg:h-5/6 flex justify-center items-center flex-col rounded-lg m-auto">
+        <div className="bg-citrus-beige-200 w-2/3 h-1/3 lg:h-5/6 flex justify-center items-center flex-col rounded-lg m-auto">
           <QRCodeSVG
+            bgColor="#F5E9CF"
+            fgColor="#30503D"
             value={`${session.user.id}&${date.toISOString()}&${
               session.user.name
             }`}

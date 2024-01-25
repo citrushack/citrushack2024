@@ -17,14 +17,14 @@ const Input = ({
     <div className={`flex items-center ${classes}`}>
       {showLabel && <p className="text-lg font-extrabold mr-2 my-0">{label}</p>}
 
-      <div className="flex items-center my-1 bg-hackathon-gray-100 rounded-md w-full">
+      <div className="flex items-center my-1 bg-white rounded-md w-full">
         <input
           data-cy={`${label}-input`}
           value={value}
           maxLength={maxLength}
           placeholder={placeholder}
           type="text"
-          className="outline-none w-full font-poppins text-base py-1 bg-transparent px-2"
+          className="outline-none w-full font-raleway text-base py-1 bg-transparent px-2"
           onChange={onChangeFn}
         />
         {clear && (

@@ -62,7 +62,7 @@ const Questions = ({
                 {index === field.texts.length - 1 && (
                   <p>
                     Fields with
-                    <span className="text-red-500"> * </span>
+                    <span className="text-citrus-orange"> * </span>
                     are required.
                   </p>
                 )}
@@ -98,7 +98,9 @@ const Questions = ({
             <>
               <p className="mb-1 font-semibold">
                 {field.text}
-                {field.required && <span className="text-red-500">*</span>}
+                {field.required && (
+                  <span className="text-citrus-orange">*</span>
+                )}
               </p>
               {field.options.map((option, i) => (
                 <Checkbox
@@ -113,7 +115,7 @@ const Questions = ({
                         : [...object[field.field], option],
                     })
                   }
-                  color="bg-hackathon-green-300"
+                  color="bg-citrus-green-100"
                 />
               ))}
             </>
@@ -157,7 +159,7 @@ const Questions = ({
       <Link
         href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
         target="_blank"
-        className="no-underline flex items-center text-hackathon-green-300"
+        className="no-underline flex items-center text-citrus-green-100"
       >
         MLH Code of Conduct
         <FaLink className="mx-2" />

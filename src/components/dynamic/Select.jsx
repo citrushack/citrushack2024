@@ -56,14 +56,14 @@ const Select = ({
     <div ref={parent}>
       <p className="mb-1 font-semibold">
         {title}
-        {required && <span className="text-red-500">*</span>}
+        {required && <span className="text-citrus-orange">*</span>}
       </p>
       <button
         disabled={!editable}
         onClick={() => setShow(!show)}
         className={`${
           !user[field] && "text-hackathon-gray-200"
-        } bg-transparent flex items-center justify-between w-full border-b-[1px] border-white pb-1`}
+        } bg-transparent flex items-center justify-between w-full border-b-[1px] border-citrus-green-200 pb-1`}
         data-cy="select-toggle"
       >
         {user[field] || placeholder}

@@ -17,7 +17,7 @@ const Checkbox = ({
         data-cy="checkbox-bg"
         className={`w-4 h-4 rounded-sm mr-4 ${
           toggle
-            ? `${color ? color : "bg-hackathon-blue-100"}`
+            ? `${color ? color : "bg-citrus-orange"}`
             : "bg-hackathon-gray-100"
         } flex items-center justify-center`}
       >

@@ -29,8 +29,8 @@ const Filter = ({ value, status, isActive, setFilters }) => {
       <div
         className={`rounded hover:opacity-70 duration-300 ${
           isActive
-            ? "text-white bg-hackathon-blue-100"
-            : "text-hackathon-blue-100 bg-white"
+            ? "text-white bg-citrus-green-100"
+            : "text-citrus-green-100 bg-white"
         } cursor-pointer flex items-center justify-between w-full`}
         data-cy={status + "-filter"}
       >

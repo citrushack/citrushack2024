@@ -29,16 +29,16 @@ const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
     <div className="flex flex-col">
       <p className="mb-0 font-semibold">
         {text}
-        {required && <span className="text-red-500">*</span>}
+        {required && <span className="text-citrus-orange">*</span>}
       </p>
       <div className="flex items-center w-full flex-col" data-cy="upload">
         {!file && (
           <label
             htmlFor="dropzone-file"
-            className="flex flex-col items-center justify-center w-full h-fit border-2 border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
+            className="flex flex-col items-center justify-center w-full h-fit rounded-lg cursor-pointer bg-white hover:bg-gray-100"
           >
             <div className="flex flex-col items-center justify-center pt-4">
-              <BsUpload className=" text-3xl mb-2 text-hackathon-green-300" />
+              <BsUpload className=" text-3xl mb-2 text-citrus-green-100" />
               <p className="text-sm text-gray-500 font-semibold">
                 Upload from my computer
               </p>

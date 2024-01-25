@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        poppins: ["var(--font-poppins)"],
+        raleway: ["var(--font-raleway)"],
         racing: ["var(--font-racing)", "sans-serif"],
       },
       colors: {

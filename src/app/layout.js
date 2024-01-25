@@ -1,15 +1,15 @@
 /* eslint-disable camelcase */
 /* eslint-disable new-cap */
 import "./globals.css";
-import { Poppins, Racing_Sans_One } from "next/font/google";
+import { Racing_Sans_One, Raleway } from "next/font/google";
 import Session from "@/components/dynamic/Session";
 import { Toaster } from "react-hot-toast";
 
-const poppins = Poppins({
+const raleway = Raleway({
   subsets: ["latin"],
   display: "swap",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-poppins",
+  variable: "--font-raleway",
 });
 
 const racing = Racing_Sans_One({
@@ -22,7 +22,7 @@ export default function RootLayout({ children, session }) {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${racing.variable} ${poppins.variable} bg-citrus-beige-100 flex flex-col lg:flex-row h-full`}
+        className={`${racing.variable} ${raleway.variable} bg-citrus-beige-100 flex flex-col lg:flex-row h-full`}
       >
         <Session session={session} refetchInterval={5 * 60} className="h-full">
           <div className="flex w-full">

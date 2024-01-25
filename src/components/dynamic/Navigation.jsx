@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import LOGO from "@/public/UCRLOGO.png";
+import LOGO from "@/public/LOGO.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { TABS } from "@/data/dynamic/Navigation";
@@ -16,14 +16,14 @@ const Navigation = () => {
 
   return (
     <>
-      <div className="flex lg:hidden w-full bg-hackathon-blue-200 h-12 items-center fixed z-20">
+      <div className="flex lg:hidden w-full bg-citrus-green-100 h-12 items-center fixed z-20">
         <div
-          className="flex items-center hover:cursor-pointer"
+          className="flex items-center hover:cursor-pointer w-full"
           onClick={() => setExpand(!expand)}
         >
           <Image
             src={LOGO}
-            className="w-10 h-10 mx-2"
+            className="w-full h-full mx-2"
             alt={`${CONFIG.name} Logo`}
           />
           <div className="text-white text-xl font-semibold">
@@ -36,16 +36,13 @@ const Navigation = () => {
           expand ? "left-0 h-screen w-1/2 fixed pt-5" : `hidden`
         }`}
       >
-        <div className="bg-hackathon-blue-200 h-full flex flex-col justify-between items-center w-full">
+        <div className="bg-citrus-green-100 h-full flex flex-col justify-between items-center w-full">
           <div className="hidden lg:flex items-center my-3">
             <Image
               src={LOGO}
-              className="w-10 h-10 mx-2"
+              className="mx-2 w-full h-full px-6"
               alt={`${CONFIG.name} Logo`}
             />
-            <p className="text-white font-bold text-lg pr-2 m-0">
-              {CONFIG.name.toUpperCase()}
-            </p>
           </div>
           <div className="w-full flex flex-col items-center h-full">
             {Object.entries(tabs)
@@ -81,8 +78,8 @@ const Navigation = () => {
                           onClick={() => setExpand(false)}
                           className={`w-full flex [&>*]:text-white items-center justify-start py-1 pl-[10%] ${
                             pathName.endsWith(tab.link)
-                              ? "bg-hackathon-blue-100"
-                              : "[&>*]:hover:text-hackathon-blue-100"
+                              ? "bg-citrus-green-200"
+                              : "[&>*]:hover:text-citrus-green-200"
                           }`}
                         >
                           {tab.icon}
@@ -105,8 +102,8 @@ const Navigation = () => {
                   onClick={() => setExpand(false)}
                   className={`w-full flex [&>*]:text-white items-center justify-start pl-[10%] py-1 ${
                     pathName.endsWith(tab.link)
-                      ? "bg-hackathon-blue-100"
-                      : "[&>*]:hover:text-hackathon-blue-100"
+                      ? "bg-citrus-green-200"
+                      : "[&>*]:hover:text-citrus-green-200"
                   }`}
                 >
                   {tab.icon}

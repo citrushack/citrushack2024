@@ -14,28 +14,28 @@ describe("Committee Filters", () => {
   it("Default Filters", () => {
     cy.get('[data-cy="pending-filter"]')
       .get("div")
-      .should("have.class", "bg-hackathon-blue-100", "text-white");
+      .should("have.class", "bg-citrus-green-100", "text-white");
     cy.get('[data-cy="rejected-filter"]')
       .get("div")
-      .should("have.class", "bg-hackathon-blue-100", "text-white");
+      .should("have.class", "bg-citrus-green-100", "text-white");
     cy.get('[data-cy="accepted-filter"]')
       .get("div")
-      .should("have.class", "bg-hackathon-blue-100", "text-white");
+      .should("have.class", "bg-citrus-green-100", "text-white");
   });
 
   it("Click Filters", () => {
     cy.get('[data-cy="pending-filter"]').click();
     cy.get('[data-cy="pending-filter"]')
       .get("div")
-      .should("have.class", "text-hackathon-blue-100", "bg-white");
+      .should("have.class", "text-citrus-green-100", "bg-white");
     cy.get('[data-cy="rejected-filter"]').click();
     cy.get('[data-cy="rejected-filter"]')
       .get("div")
-      .should("have.class", "text-hackathon-blue-100", "bg-white");
+      .should("have.class", "text-citrus-green-100", "bg-white");
     cy.get('[data-cy="accepted-filter"]').click();
     cy.get('[data-cy="accepted-filter"]')
       .get("div")
-      .should("have.class", "text-hackathon-blue-100", "bg-white");
+      .should("have.class", "text-citrus-green-100", "bg-white");
   });
 
   it("Click Pending", () => {
