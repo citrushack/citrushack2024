@@ -1,14 +1,15 @@
-const Header = ({ text, color }) => {
+import { COLORS } from "@/data/static/colors";
+const Header = ({ text, color, shadow }) => {
   return (
     <div
-      className={`w-8/12 ml-[10%] text-[80px] leading-none text-hackathon-gray-100 font-bold font-racing relative border-b-[6px] border-citrus-${color} pb-2`}
+      className={`${COLORS[shadow].text} ${COLORS[color].border} w-8/12 text-8xl font-racing relative border-b-[6px] pb-2`}
     >
       {text}
-      <p
-        className={`!text-[40px] pb-2 text-black font-extrabold absolute bottom-0 border-b-[10px] pr-[7%] border-citrus-${color}`}
+      <div
+        className={`text-5xl pb-2 text-black absolute bottom-0 border-b-[10px] pr-5 ${COLORS[color].border}`}
       >
         {text}
-      </p>
+      </div>
     </div>
   );
 };
