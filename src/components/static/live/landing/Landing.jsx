@@ -12,7 +12,7 @@ const Landing = () => {
     <div className="w-full relative flex items-center justify-between">
       <div className="absolute overflow-hidden top-0 w-full z-0">
         <RollingText reverse={true}>
-          <div className="text-8xl text-citrus-beige-200 font-racing">
+          <div className="text-9xl text-transparent text-stroke-citrus-beige-200 stroke-weight-[4px] font-racing">
             CITRUSHACK
           </div>
         </RollingText>
@@ -24,7 +24,7 @@ const Landing = () => {
       </div>
       <div className="absolute overflow-hidden bottom-0 w-full z-0">
         <RollingText reverse={true}>
-          <div className="text-8xl text-citrus-beige-200 font-racing">
+          <div className="text-9xl text-transparent text-stroke-citrus-beige-200 stroke-weight-[4px] font-racing">
             CITRUSHACK
           </div>
         </RollingText>
