@@ -10,7 +10,7 @@ import arrow from "@/public/svg/landing/arrow.svg";
 
 const Landing = () => {
   return (
-    <div className="w-full relative flex flex-col lg:flex-row justify-between min-h-[70vh]">
+    <div className="w-full relative flex flex-col md:flex-row justify-between min-h-[70vh]">
       <div className="absolute overflow-hidden top-0 w-full z-0">
         <RollingText reverse={true}>
           <div className="text-8xl 2xl:text-[300px] text-citrus-beige-200 font-racing">
