@@ -13,7 +13,7 @@ export const FIELDS = {
     input: "description",
     width: 12,
     texts: [
-      "Welcome to HACKATHON_NAME. Thank you for being on the organizing team, we appreciate your efforts to help support HACKATHON_NAME. HACKATHON_NAME is a DESCRIPTION hackathon spanning HACKATHON_LENGTH on HACKATHON_DATE.",
+      "Welcome to Citrushack. Thank you for being on the organizing team, we appreciate your efforts to help support Citrushack. Citrushack is the biggest hackathon at UCR spanning 36h on April 5th 2024.",
       "Admins are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
       "Note: Admins are not permitted to become participants for the hackathon.",
     ],

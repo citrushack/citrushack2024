@@ -3,7 +3,7 @@ export const FIELDS = {
     input: "description",
     width: 12,
     texts: [
-      "Welcome to HACKATHON_NAME. Thank you for taking interest in HACKATHON_NAME, we appreciate your efforts to help support HACKATHON_NAME. HACKATHON_NAME is a DESCRIPTION hackathon spanning HACKATHON_LENGTH on HACKATHON_DATE.",
+      "Welcome to Citrushack. Thank you for taking interest in Citrushack, we appreciate your efforts to help support Citrushack. Citrushack is the biggest hackathon at UCR spanning 36h on April 5th 2024.",
       "This is simply an interest form, once applications are released, you will be notified immediately and will be required to register again. We hope to see you there!",
     ],
   },
