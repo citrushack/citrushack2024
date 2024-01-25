@@ -14,7 +14,7 @@ const Input = ({
     <div className="flex flex-col w-full">
       <p className="mb-1 font-semibold">
         {title}
-        {required && <span className="text-citrus-orange">*</span>}
+        {required && <span className="text-citrus-green-100">*</span>}
       </p>
       <input
         disabled={!editable}

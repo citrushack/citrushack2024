@@ -22,7 +22,7 @@ export default function RootLayout({ children, session }) {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${racing.variable} ${raleway.variable} bg-citrus-beige-100 flex flex-col lg:flex-row h-full`}
+        className={`${racing.variable} ${raleway.variable} bg-gray-200 flex flex-col lg:flex-row h-full`}
       >
         <Session session={session} refetchInterval={5 * 60} className="h-full">
           <div className="flex w-full">

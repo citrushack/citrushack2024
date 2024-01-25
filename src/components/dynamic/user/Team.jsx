@@ -122,7 +122,7 @@ const Team = ({ user, setUser }) => {
   }, [user.team]);
 
   return (
-    <div className="bg-citrus-beige-100 rounded-lg p-4 gap-3 m-2 overflow-scroll max-h-[70vh] flex flex-col justify-start">
+    <div className="bg-gray-200 rounded-lg p-4 gap-3 m-2 overflow-scroll max-h-[70vh] flex flex-col justify-start">
       {user.team && !load && <Loading />}
       {user.team && load && (
         <>
@@ -179,7 +179,7 @@ const Team = ({ user, setUser }) => {
           </div>
           <div className="mt-3 pt-2 flex-grow">
             <p className="mb-1 font-semibold">Team ID</p>
-            <div className="text-citrus-orange">
+            <div className="text-citrus-green-100">
               share this team ID or join link to your teammates
             </div>
             <p className="pl-3 mb-0 flex items-center">

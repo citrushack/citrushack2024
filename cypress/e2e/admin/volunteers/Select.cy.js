@@ -38,7 +38,7 @@ describe("Volunteers Select", () => {
       else
         cy.get(`[data-cy="${volunteer.uid}"]`).should(
           "have.class",
-          "bg-citrus-beige-100"
+          "bg-gray-200"
         );
     });
   });

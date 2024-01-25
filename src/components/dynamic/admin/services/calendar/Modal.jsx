@@ -14,7 +14,7 @@ const CalendarModal = ({ event, setEvent }) => {
         <span className="text-3xl text-white font-bold">{event.summary}</span>
         <FaTimes
           onClick={() => setEvent(null)}
-          className="hover:cursor-pointer text-white hover:!text-citrus-orange text-xl"
+          className="hover:cursor-pointer text-white hover:!text-citrus-green-100 text-xl"
         />
       </div>
       <div className="bg-white px-3 rounded-b-xl py-2 border-x-2 border-b-2 border-hackathon-darkgray">

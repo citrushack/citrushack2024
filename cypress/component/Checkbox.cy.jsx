@@ -38,7 +38,10 @@ describe("Checkbox", () => {
 
     cy.mount(<Parent />);
 
-    cy.get('[data-cy="checkbox-bg"]').should("have.class", "bg-citrus-orange");
+    cy.get('[data-cy="checkbox-bg"]').should(
+      "have.class",
+      "bg-citrus-green-100"
+    );
     cy.get('[data-cy="checkmark"]').should("have.class", "text-white");
   });
 
@@ -81,7 +84,10 @@ describe("Checkbox", () => {
     cy.mount(<Parent />);
 
     cy.get('[data-cy="checkbox-bg"]').click();
-    cy.get('[data-cy="checkbox-bg"]').should("have.class", "bg-citrus-orange");
+    cy.get('[data-cy="checkbox-bg"]').should(
+      "have.class",
+      "bg-citrus-green-100"
+    );
     cy.get('[data-cy="checkmark"]').should("have.class", "text-white");
   });
 });

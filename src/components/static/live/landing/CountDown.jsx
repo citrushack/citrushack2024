@@ -1,8 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { CONFIG } from "@/data/Config";
-import Image from "next/image";
-import flag from "@/public/svg/landing/flag.svg";
 
 const Countdown = () => {
   const [time, setTime] = useState({
@@ -41,16 +39,14 @@ const Countdown = () => {
 
   return (
     <div className="bg-black rounded-lg p-2 w-full">
-      <div className="border-4 rounded-lg border-citrus-beige-100 p-2 font-racing text-citrus-beige-100 py-3">
-        <div className="flex items-center justify-between">
-          <Image src={flag} />
-          <div className="text-2xl mx-2">April 5th - 7 th 2024</div>
-          <Image src={flag} />
+      <div className="border-4 rounded-lg border-gray-200 p-2 font-racing text-gray-200 py-3">
+        <div className="text-2xl mx-2 w-full text-center">
+          April 5th - 7 th 2024
         </div>
         <div className="gap-1 grid">
-          <div className="bg-citrus-beige-100 h-[1px] w-full" />
-          <div className="bg-citrus-beige-100 h-[2px] w-full" />
-          <div className="bg-citrus-beige-100 h-[3px] w-full" />
+          <div className="bg-gray-200 h-[1px] w-full" />
+          <div className="bg-gray-200 h-[2px] w-full" />
+          <div className="bg-gray-200 h-[3px] w-full" />
         </div>
         <div className="grid grid-cols-4">
           <div className="flex items-center justify-center">DAYS</div>
@@ -58,7 +54,7 @@ const Countdown = () => {
           <div className="flex items-center justify-center">MINUTES</div>
           <div className="flex items-center justify-center">SECONDS</div>
         </div>
-        <div className="bg-citrus-beige-100 h-[3px] w-full" />
+        <div className="bg-gray-200 h-[3px] w-full" />
         <div className="grid grid-cols-7 items-center justify-between w-full font-orbitron font-bold text-4xl px-4 py-2">
           {Object.entries(time).map(([text, value], index) => (
             <>
@@ -70,7 +66,7 @@ const Countdown = () => {
                 {value % 10}
               </p>
               {text !== "SECONDS" && (
-                <p className="text-citrus-beige-100 flex items-center justify-center">
+                <p className="text-gray-200 flex items-center justify-center">
                   :
                 </p>
               )}
@@ -78,9 +74,9 @@ const Countdown = () => {
           ))}
         </div>
         <div className="gap-1 grid">
-          <div className="bg-citrus-beige-100 h-[3px] w-full" />
-          <div className="bg-citrus-beige-100 h-[2px] w-full" />
-          <div className="bg-citrus-beige-100 h-[1px] w-full" />
+          <div className="bg-gray-200 h-[3px] w-full" />
+          <div className="bg-gray-200 h-[2px] w-full" />
+          <div className="bg-gray-200 h-[1px] w-full" />
         </div>
       </div>
     </div>

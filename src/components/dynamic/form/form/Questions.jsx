@@ -62,7 +62,7 @@ const Questions = ({
                 {index === field.texts.length - 1 && (
                   <p>
                     Fields with
-                    <span className="text-citrus-orange"> * </span>
+                    <span className="text-citrus-green-100"> * </span>
                     are required.
                   </p>
                 )}
@@ -99,7 +99,7 @@ const Questions = ({
               <p className="mb-1 font-semibold">
                 {field.text}
                 {field.required && (
-                  <span className="text-citrus-orange">*</span>
+                  <span className="text-citrus-green-100">*</span>
                 )}
               </p>
               {field.options.map((option, i) => (

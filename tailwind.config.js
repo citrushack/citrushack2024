@@ -27,16 +27,13 @@ module.exports = {
       },
       colors: {
         citrus: {
-          "gray-100": "#A7A7A7",
-          "gray-200": "#3E3E3E",
-          "beige-100": "#FFF8EA",
-          "beige-200": "#F5E9CF",
-          orange: "#FF753A",
+          "gray-100": "##EFEFEF",
+          "gray-200": "#3C3F43",
+          "orange-100": "#FFE3BB",
+          "orange-200": "#FFB47E",
           "green-200": "#30503D",
-          "green-100": "#8AB8AB",
-          red: "#E13636",
-          yellow: "#FFB800",
-          teal: "#00F3D6",
+          "green-100": "#A5BE6A",
+          black: "#212427",
         },
         hackathon: {
           "blue-100": "#38A3A5",

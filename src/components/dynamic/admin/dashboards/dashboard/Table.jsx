@@ -22,9 +22,9 @@ const Table = ({
 }) => {
   return (
     <>
-      <div className="bg-citrus-beige-100 h-[75vh] overflow-y-scroll flex flex-col justify-between">
+      <div className="bg-gray-200 h-[75vh] overflow-y-scroll flex flex-col justify-between">
         <div>
-          <div className="text-white bg-citrus-orange rounded-t-lg">
+          <div className="text-white bg-citrus-green-100 rounded-t-lg">
             {getHeaderGroups().map(({ headers, id }) => (
               <div key={id} className="flex items-center px-3 py-2">
                 {headers.map(({ id, column, getContext }) => (
@@ -64,9 +64,7 @@ const Table = ({
           </div>
           <>
             {getRowModel().rows.length === 0 && (
-              <p className="w-full text-center py-8 bg-citrus-beige-100">
-                {empty}
-              </p>
+              <p className="w-full text-center py-8 bg-gray-200">{empty}</p>
             )}
             {getRowModel().rows.map(
               ({ id, getVisibleCells, original, getIsSelected }) => (
@@ -82,7 +80,7 @@ const Table = ({
           </>
         </div>
       </div>
-      <div className="flex justify-end items-center p-4 text-lg bg-citrus-beige-100 w-full rounded-b-lg">
+      <div className="flex justify-end items-center p-4 text-lg bg-gray-200 w-full rounded-b-lg">
         <div className="mx-2">{getRowModel().rows.length} row(s)</div>
         <button
           onClick={() => previousPage()}

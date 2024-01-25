@@ -38,7 +38,7 @@ describe("committee Select", () => {
       else
         cy.get(`[data-cy="${committee.uid}"]`).should(
           "have.class",
-          "bg-citrus-beige-100"
+          "bg-gray-200"
         );
     });
   });

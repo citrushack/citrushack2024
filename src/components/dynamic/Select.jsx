@@ -56,7 +56,7 @@ const Select = ({
     <div ref={parent}>
       <p className="mb-1 font-semibold">
         {title}
-        {required && <span className="text-citrus-orange">*</span>}
+        {required && <span className="text-citrus-green-100">*</span>}
       </p>
       <button
         disabled={!editable}
