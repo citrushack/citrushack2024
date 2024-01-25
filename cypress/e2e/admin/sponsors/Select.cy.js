@@ -33,7 +33,10 @@ describe("Sponsors Select", () => {
           "bg-citrus-green-100/30"
         );
       else
-        cy.get(`[data-cy="${sponsor.uid}"]`).should("have.class", "bg-white");
+        cy.get(`[data-cy="${sponsor.uid}"]`).should(
+          "have.class",
+          "bg-citrus-beige-100"
+        );
     });
   });
 });

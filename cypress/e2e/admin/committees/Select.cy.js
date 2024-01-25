@@ -36,7 +36,10 @@ describe("committee Select", () => {
           "bg-citrus-green-100/30"
         );
       else
-        cy.get(`[data-cy="${committee.uid}"]`).should("have.class", "bg-white");
+        cy.get(`[data-cy="${committee.uid}"]`).should(
+          "have.class",
+          "bg-citrus-beige-100"
+        );
     });
   });
 });
