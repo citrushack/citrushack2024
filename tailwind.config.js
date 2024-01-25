@@ -27,13 +27,13 @@ module.exports = {
       },
       colors: {
         citrus: {
-          "gray-200": "#A7A7A7",
-          "gray-100": "#3E3E3E",
+          "gray-100": "#A7A7A7",
+          "gray-200": "#3E3E3E",
           "beige-100": "#FFF8EA",
           "beige-200": "#F5E9CF",
           orange: "#FF753A",
-          "green-100": "#30503D",
-          "green-200": "#8AB8AB",
+          "green-200": "#30503D",
+          "green-100": "#8AB8AB",
           red: "#E13636",
           yellow: "#FFB800",
           teal: "#00F3D6",
