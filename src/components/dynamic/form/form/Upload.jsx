@@ -35,7 +35,7 @@ const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
         {!file && (
           <label
             htmlFor="dropzone-file"
-            className="flex flex-col items-center justify-center w-full h-fit rounded-lg cursor-pointer bg-white hover:bg-gray-100"
+            className="flex flex-col items-center justify-center w-full h-fit rounded-lg cursor-pointer bg-citrus-gray-100 hover:bg-gray-100"
           >
             <div className="flex flex-col items-center justify-center pt-4">
               <BsUpload className=" text-3xl mb-2 text-citrus-green-100" />

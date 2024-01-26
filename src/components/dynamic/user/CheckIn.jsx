@@ -37,10 +37,10 @@ const CheckinPage = () => {
           </p>
           <p className="text-base">{session.user.email}</p>
         </div>
-        <div className="bg-citrus-black w-2/3 h-1/3 lg:h-5/6 flex justify-center items-center flex-col rounded-lg m-auto">
+        <div className="w-2/3 h-1/3 lg:h-5/6 flex justify-center items-center flex-col rounded-lg m-auto">
           <QRCodeSVG
-            bgColor="#F5E9CF"
-            fgColor="#30503D"
+            bgColor="#EFEFEF"
+            fgColor="#212427"
             value={`${session.user.id}&${date.toISOString()}&${
               session.user.name
             }`}

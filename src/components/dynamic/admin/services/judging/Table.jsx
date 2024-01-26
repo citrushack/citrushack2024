@@ -13,7 +13,7 @@ const Table = ({ data }) => {
         .filter((group) => !group.hidden)
         .map(({ name, links, table, rounds }, index) => (
           <div key={index} className="flex justify-between items-start p-2">
-            <div className="bg-gray-200 w-full p-3 rounded-xl">
+            <div className="bg-white w-full p-3 rounded-xl">
               <div className="flex justify-between items-center">
                 <Tag color={COLORS["grayblue"]} text={name} />
                 <div className="flex justify-start w-full ml-2">

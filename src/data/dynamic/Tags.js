@@ -10,7 +10,7 @@ const mappings = {
     hover: "hover:shadow-[inset_0px_0px_0px_2px_#FFB800]",
   },
   green: {
-    background: "bg-citrus-green-100/30",
+    background: "bg-citrus-green-100",
     text: "text-citrus-green-200",
     hover: "hover:shadow-[inset_0px_0px_0px_2px_#30503D]",
   },

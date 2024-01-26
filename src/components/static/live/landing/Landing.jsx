@@ -10,15 +10,15 @@ const Landing = () => {
     <div className="w-full relative flex items-center justify-between min-h-screen">
       <div className="absolute overflow-hidden top-0 w-full z-0">
         <RollingText reverse={true}>
-          <div className="text-8xl text-citrus-black font-racing">
-            CITRUSHACK
+          <div className="text-8xl text-transparent font-racing text-stroke-citrus-green-200/30 stroke-weight-[2px]">
+            &nbsp;CITRUSHACK&nbsp;
           </div>
         </RollingText>
       </div>
       <div className="absolute overflow-hidden bottom-0 w-full z-0">
-        <RollingText reverse={true}>
-          <div className="text-8xl text-citrus-black font-racing">
-            CITRUSHACK
+        <RollingText reverse={false}>
+          <div className="text-8xl text-transparent font-racing text-stroke-citrus-green-200/30 stroke-weight-[2px]">
+            &nbsp;CITRUSHACK&nbsp;
           </div>
         </RollingText>
       </div>

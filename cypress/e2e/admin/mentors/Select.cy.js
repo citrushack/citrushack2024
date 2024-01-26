@@ -17,7 +17,7 @@ describe("Mentor Select", () => {
     mentors.forEach((mentor) => {
       cy.get(`[data-cy="${mentor.uid}"]`).should(
         "have.class",
-        "bg-citrus-green-100/30"
+        "bg-citrus-green-100"
       );
     });
   });
@@ -30,7 +30,7 @@ describe("Mentor Select", () => {
       if (index < 5)
         cy.get(`[data-cy="${mentor.uid}"]`).should(
           "have.class",
-          "bg-citrus-green-100/30"
+          "bg-citrus-green-100"
         );
       else
         cy.get(`[data-cy="${mentor.uid}"]`).should("have.class", "bg-gray-200");

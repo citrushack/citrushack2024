@@ -37,7 +37,9 @@ const Header = ({ horizontal = true }) => {
         <p className="text-2xl font-bold mb-0 text-citrus-green-100">
           {session.user.name}
         </p>
-        <p className="text-base mb-1">{session.user.email}</p>
+        <p className="text-base mb-1 text-citrus-gray-100">
+          {session.user.email}
+        </p>
         <Tag color={COLORS[color]} text={text} />
       </div>
     </div>

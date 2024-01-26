@@ -11,7 +11,7 @@ describe("Tag", () => {
     cy.get('[data-cy="Accept-tag"]').contains("Accept");
     cy.get('[data-cy="Accept-tag"]').should(
       "have.class",
-      "bg-citrus-green-100/30",
+      "bg-citrus-green-100",
       "text-citrus-green-200",
       "hover:shadow-[inset_0px_0px_0px_2px_#00AFB9]"
     );
@@ -72,7 +72,7 @@ describe("Tag", () => {
     cy.get('[data-cy="Accept-tag"]').contains("Accept");
     cy.get('[data-cy="Accept-tag"]').should(
       "have.class",
-      "bg-citrus-green-100/30",
+      "bg-citrus-green-100",
       "text-citrus-green-200",
       "hover:shadow-[inset_0px_0px_0px_2px_#30503D]"
     );
@@ -89,7 +89,7 @@ describe("Tag", () => {
     cy.get('[data-cy="Accept-tag"]').contains("Accept");
     cy.get('[data-cy="Accept-tag"]').should(
       "have.class",
-      "bg-citrus-green-100/30",
+      "bg-citrus-green-100",
       "text-citrus-green-200"
     );
     cy.get('[data-cy="Accept-tag"]').should(
