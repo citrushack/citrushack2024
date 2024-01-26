@@ -43,7 +43,7 @@ const Landing = () => {
                 href="/user/dashboard"
               >
                 Go To
-                <span className="text-citrus-orange-200 underline">
+                <span className="text-citrus-green-100 underline">
                   Dashboard
                 </span>
                 <MdArrowOutward />
@@ -55,7 +55,7 @@ const Landing = () => {
                   href="/form/participant"
                 >
                   Apply to
-                  <span className="text-citrus-orange-200 underline">
+                  <span className="text-citrus-green-100 underline">
                     Participate
                   </span>
                   <MdArrowOutward />
