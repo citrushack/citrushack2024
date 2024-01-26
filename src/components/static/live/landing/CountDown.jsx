@@ -38,7 +38,7 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="bg-black rounded-lg p-2 w-full">
+    <div className="bg-citrus-black rounded-lg p-2 w-full">
       <div className="border-4 rounded-lg border-citrus-gray-100 p-2 font-racing text-citrus-gray-100 py-3">
         <div className="text-2xl mx-2 w-full text-center">
           April 5th - 7 th 2024
@@ -59,7 +59,7 @@ const Countdown = () => {
           {Object.entries(time).map(([text, value], index) => (
             <>
               <p
-                className="text-citrus-red text-5xl flex items-center justify-center"
+                className="text-citrus-red text-5xl flex items-center justify-center text-citrus-green-100"
                 key={index}
               >
                 {parseInt(value / 10)}
