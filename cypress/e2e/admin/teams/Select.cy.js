@@ -17,7 +17,7 @@ describe("Teams Select", () => {
     teams.forEach((team) => {
       cy.get(`[data-cy="${team.uid}"]`).should(
         "have.class",
-        "bg-citrus-green-100"
+        "bg-citrus-green-100/30"
       );
     });
   });
@@ -30,13 +30,9 @@ describe("Teams Select", () => {
       if (index < 5)
         cy.get(`[data-cy="${team.uid}"]`).should(
           "have.class",
-          "bg-citrus-green-100"
+          "bg-citrus-green-100/30"
         );
-      else
-        cy.get(`[data-cy="${team.uid}"]`).should(
-          "have.class",
-          "bg-citrus-gray-100"
-        );
+      else cy.get(`[data-cy="${team.uid}"]`).should("have.class", "bg-white");
     });
   });
 });

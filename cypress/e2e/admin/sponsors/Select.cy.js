@@ -17,7 +17,7 @@ describe("Sponsors Select", () => {
     sponsors.forEach((sponsor) => {
       cy.get(`[data-cy="${sponsor.uid}"]`).should(
         "have.class",
-        "bg-citrus-green-100"
+        "bg-citrus-green-100/30"
       );
     });
   });
@@ -30,13 +30,10 @@ describe("Sponsors Select", () => {
       if (index < 5)
         cy.get(`[data-cy="${sponsor.uid}"]`).should(
           "have.class",
-          "bg-citrus-green-100"
+          "bg-citrus-green-100/30"
         );
       else
-        cy.get(`[data-cy="${sponsor.uid}"]`).should(
-          "have.class",
-          "bg-citrus-gray-100"
-        );
+        cy.get(`[data-cy="${sponsor.uid}"]`).should("have.class", "bg-white");
     });
   });
 });
