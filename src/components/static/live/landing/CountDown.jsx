@@ -41,7 +41,7 @@ const Countdown = () => {
 
   return (
     <div className="bg-citrus-black rounded-lg p-2 w-full mt-3">
-      <div className="border-4 rounded-lg border-citrus-gray-100 p-2 font-racing text-citrus-gray-100 py-3">
+      <div className="border-4 rounded-lg border-citrus-gray-100 p-2 font-russo text-citrus-gray-100 py-3">
         <div className="flex">
           <Image src={flag} alt="flag" />
           <div className="text-2xl mx-2 w-full text-center">

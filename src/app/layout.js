@@ -12,9 +12,9 @@ const raleway = Raleway({
   variable: "--font-raleway",
 });
 
-const racing = Russo_One({
+const russo = Russo_One({
   subsets: ["latin"],
-  variable: "--font-racing",
+  variable: "--font-russo",
   weight: ["400"],
 });
 const rock = Rock_Salt({
@@ -27,7 +27,7 @@ export default function RootLayout({ children, session }) {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${racing.variable} ${raleway.variable} ${rock.variable} bg-citrus-gray-100 flex flex-col lg:flex-row h-full`}
+        className={`${russo.variable} ${raleway.variable} ${rock.variable} bg-citrus-gray-100 flex flex-col lg:flex-row h-full`}
       >
         <Session session={session} refetchInterval={5 * 60} className="h-full">
           <div className="flex w-full">

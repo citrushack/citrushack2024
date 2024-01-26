@@ -1,7 +1,7 @@
 const Error = ({ code, error, message, dev }) => {
   return (
-    <div className="w-screen h-screen flex flex-col  font-racing items-center justify-center fixed">
-      <p className="text-center text-9xl font-racing text-transparent text-stroke-citrus-green-100 stroke-weight-[4px] m-0">
+    <div className="w-screen h-screen flex flex-col  font-russo items-center justify-center fixed">
+      <p className="text-center text-9xl font-russo text-transparent text-stroke-citrus-green-100 stroke-weight-[4px] m-0">
         {code}
       </p>
       <p className="text-center text-lg md:text-2xl text-citrus-green-200 m-0">
