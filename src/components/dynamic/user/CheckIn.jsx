@@ -32,7 +32,7 @@ const CheckinPage = () => {
             className="rounded-full overflow-hidden"
             alt="Picture of user's profile"
           />
-          <p className="text-2xl font-bold text-citrus-green-100">
+          <p className="text-2xl font-bold text-citrus-green-200">
             {session.user.name}
           </p>
           <p className="text-base">{session.user.email}</p>
