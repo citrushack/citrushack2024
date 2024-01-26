@@ -26,6 +26,7 @@ export const theme = {
     fontFamily: {
       raleway: ["var(--font-raleway)"],
       racing: ["var(--font-racing)", "sans-serif"],
+      rock: ["var(--font-rock)", "sans-serif"],
     },
     colors: {
       citrus: {

@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { CONFIG } from "@/data/Config";
+import Image from "next/image";
+import flag from "@/public/svg/landing/flag.svg";
 
 const Countdown = () => {
   const [time, setTime] = useState({
@@ -38,10 +40,14 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="bg-citrus-black rounded-lg p-2 w-full">
+    <div className="bg-citrus-black rounded-lg p-2 w-full mt-3">
       <div className="border-4 rounded-lg border-citrus-gray-100 p-2 font-racing text-citrus-gray-100 py-3">
-        <div className="text-2xl mx-2 w-full text-center">
-          April 5th - 7 th 2024
+        <div className="flex">
+          <Image src={flag} alt="flag" />
+          <div className="text-2xl mx-2 w-full text-center">
+            April 5th - 7 th 2024
+          </div>
+          <Image src={flag} alt="flag" />
         </div>
         <div className="gap-1 grid">
           <div className="bg-citrus-gray-100 h-[1px] w-full" />
@@ -66,9 +72,7 @@ const Countdown = () => {
                 {value % 10}
               </p>
               {text !== "SECONDS" && (
-                <p className="text-citrus-green-100 flex items-center justify-center">
-                  :
-                </p>
+                <p className="flex items-center justify-center">:</p>
               )}
             </>
           ))}

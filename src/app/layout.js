@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable new-cap */
 import "./globals.css";
-import { Racing_Sans_One, Raleway } from "next/font/google";
+import { Russo_One, Raleway, Rock_Salt } from "next/font/google";
 import Session from "@/components/dynamic/Session";
 import { Toaster } from "react-hot-toast";
 
@@ -12,9 +12,14 @@ const raleway = Raleway({
   variable: "--font-raleway",
 });
 
-const racing = Racing_Sans_One({
+const racing = Russo_One({
   subsets: ["latin"],
   variable: "--font-racing",
+  weight: ["400"],
+});
+const rock = Rock_Salt({
+  subsets: ["latin"],
+  variable: "--font-rock",
   weight: ["400"],
 });
 
@@ -22,7 +27,7 @@ export default function RootLayout({ children, session }) {
   return (
     <html lang="en" className="h-full">
       <body
-        className={`${racing.variable} ${raleway.variable} bg-citrus-gray-100 flex flex-col lg:flex-row h-full`}
+        className={`${racing.variable} ${raleway.variable} ${rock.variable} bg-citrus-gray-100 flex flex-col lg:flex-row h-full`}
       >
         <Session session={session} refetchInterval={5 * 60} className="h-full">
           <div className="flex w-full">
