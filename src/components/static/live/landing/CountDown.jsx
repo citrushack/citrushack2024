@@ -59,14 +59,14 @@ const Countdown = () => {
           {Object.entries(time).map(([text, value], index) => (
             <>
               <p
-                className="text-citrus-red text-5xl flex items-center justify-center text-citrus-green-100"
+                className="text-citrus-red text-5xl flex items-center justify-center text-citrus-gray-100"
                 key={index}
               >
                 {parseInt(value / 10)}
                 {value % 10}
               </p>
               {text !== "SECONDS" && (
-                <p className="text-citrus-gray-100 flex items-center justify-center">
+                <p className="text-citrus-green-100 flex items-center justify-center">
                   :
                 </p>
               )}
