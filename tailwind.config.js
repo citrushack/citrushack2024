@@ -36,6 +36,8 @@ export const theme = {
         "green-200": "#30503D",
         "green-100": "#A5BE6A",
         black: "#212427",
+        yellow: "#FFB800",
+        red: "#E13636",
       },
       hackathon: {
         "blue-100": "#38A3A5",

@@ -59,7 +59,7 @@ const Countdown = () => {
           {Object.entries(time).map(([text, value], index) => (
             <>
               <p
-                className="text-citrus-red text-5xl flex items-center justify-center text-citrus-gray-100"
+                className="text-5xl flex items-center justify-center text-citrus-gray-100"
                 key={index}
               >
                 {parseInt(value / 10)}
