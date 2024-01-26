@@ -35,7 +35,7 @@ describe("Sponsors Select", () => {
       else
         cy.get(`[data-cy="${sponsor.uid}"]`).should(
           "have.class",
-          "bg-gray-200"
+          "bg-citrus-gray-100"
         );
     });
   });

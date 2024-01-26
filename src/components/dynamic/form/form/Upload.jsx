@@ -56,7 +56,7 @@ const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
         )}
         {file && (
           <div
-            className="flex items-center justify-between w-full my-2 bg-gray-200 px-2 py-2"
+            className="flex items-center justify-between w-full my-2 bg-citrus-gray-100 px-2 py-2"
             data-cy="upload-success"
           >
             <div className="flex items-center">
