@@ -1,25 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/data/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      animation: {
-        rolling: "rolling 20s linear infinite",
-        "rolling-reverse": "rolling-reverse 20s linear infinite",
+import tailwindPlugin from "tailwindcss/plugin";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+
+export const content = [
+  "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+  "./src/data/**/*.{js,ts,jsx,tsx,mdx}",
+  "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+];
+export const theme = {
+  extend: {
+    animation: {
+      rolling: "rolling 20s linear infinite",
+      "rolling-reverse": "rolling-reverse 20s linear infinite",
+    },
+    keyframes: {
+      rolling: {
+        "0%": { transform: "translateX(0%)" },
+        "100%": { transform: "translateX(-100%)" },
       },
-      keyframes: {
-        rolling: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
-        },
-        "rolling-reverse": {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(0%)" },
-        },
+      "rolling-reverse": {
+        "0%": { transform: "translateX(-100%)" },
+        "100%": { transform: "translateX(0%)" },
       },
       fontFamily: {
         raleway: ["var(--font-raleway)"],
@@ -75,5 +76,27 @@ module.exports = {
       },
     },
   },
-  plugins: [],
 };
+
+export const plugins = [
+  tailwindPlugin(function ({ matchUtilities, theme }) {
+    matchUtilities(
+      {
+        "text-stroke": (value) => {
+          return { "-webkit-text-stroke": `var(--tw-stroke-weight) ${value}` };
+        },
+      },
+      { values: flattenColorPalette(theme("colors")), type: ["color", "any"] }
+    );
+  }),
+  tailwindPlugin(function ({ matchUtilities, theme }) {
+    matchUtilities(
+      {
+        "stroke-weight": (value) => {
+          return { "--tw-stroke-weight": value };
+        },
+      },
+      { values: theme("spacing") }
+    );
+  }),
+];
