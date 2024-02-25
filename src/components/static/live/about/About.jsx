@@ -1,9 +1,9 @@
 import Image from "next/image";
 import rayas from "@/public/svg/about/rayas.svg";
 import title from "@/public/svg/about/title.svg";
-import corner from "@/public/svg/about/corner.svg";
 import car from "@/public/svg/about/car.svg";
 import { PiTagSimpleFill } from "react-icons/pi";
+import Corners from "../../Corners";
 
 const About = () => {
   return (
@@ -22,19 +22,7 @@ const About = () => {
               36 HOUR HACKATHON AT UCR
             </div>
             <div className="flex flex-col items-start relative py-8 gap-2">
-              <Image src={corner} className="absolute top-0 left-0" />
-              <Image
-                src={corner}
-                className="absolute top-0 right-0 rotate-90"
-              />
-              <Image
-                src={corner}
-                className="absolute bottom-0 left-0 -rotate-90"
-              />
-              <Image
-                src={corner}
-                className="absolute bottom-0 right-0 rotate-180"
-              />
+              <Corners />
               <div className="flex items-center justify-center text-lg lg:text-2xl gap-2">
                 <PiTagSimpleFill />
                 500+ HACKERS
