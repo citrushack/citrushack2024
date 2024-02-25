@@ -20,10 +20,10 @@ const Landing = () => {
             May 17 - 19, 2024 Coming Soon!
           </div>
           <Countdown />
-          <div className="text-2xl md:text-3xl lg:text-5xl text-citrus-orange font-bold mb-4 text-right">
-            See you at the endl;!
-          </div>
         </div>
+      </div>
+      <div className="text-2xl md:text-3xl lg:text-5xl text-citrus-orange font-bold mb-4 text-right">
+        See you at the endl;!
       </div>
       <div className="flex flex-col lg:flex-row w-10/12 justify-between gap-2">
         <Button text="Participate" link="/form/participant" />

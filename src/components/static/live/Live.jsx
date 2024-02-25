@@ -1,6 +1,7 @@
 import About from "./about/About";
 import Landing from "./landing/Landing";
 import Schedule from "./schedule/Schedule";
+import Tracks from "./tracks/Tracks";
 
 const Live = () => {
   return (
@@ -8,6 +9,7 @@ const Live = () => {
       <Landing />
       <About />
       <Schedule />
+      <Tracks />
     </div>
   );
 };
