@@ -6,10 +6,15 @@ import confetti from "@/public/svg/sponsor/confetti.svg";
 const Sponsors = () => {
   return (
     <div className="relative w-full items-center justify-center flex flex-col py-12">
-      <Image src={confetti} className="absolute top-0 left-0 w-1/6" />
+      <Image
+        src={confetti}
+        className="absolute top-0 left-0 w-1/6"
+        alt="confetti"
+      />
       <Image
         src={confetti}
         className="absolute top-0 right-0 -scale-x-100 w-1/6"
+        alt="confetti"
       />
       <Header text="Out Sponsors" color="black" />
       <div className="flex flex-wrap w-8/12 items-center justify-center">

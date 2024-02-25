@@ -7,7 +7,7 @@ import { useState } from "react";
 const FAQ = () => {
   const [selected, setSelected] = useState(null);
   return (
-    <div className="flex justify-center items-center flex-col w-10/12 md:w-1/2">
+    <div className="flex justify-center items-center flex-col w-10/12 md:w-1/2 relative z-10 mb-24">
       <Header text="FAQ" color="black" />
       <div className="w-full bg-citrus-black mt-4 p-5 rounded-3xl">
         {QUESTIONS.map(({ question, answer }, index) => (

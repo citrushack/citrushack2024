@@ -7,7 +7,7 @@ const Item = ({ question, answer, index, selected, setSelected }) => {
         className=" text-citrus-beige w-full"
         onClick={() => setSelected(index === selected ? null : index)}
       >
-        <div className="flex justify-between items-center w-full font-black mt-3">
+        <div className="flex justify-between items-center w-full font-black mt-3 cursor-pointer">
           {question}
           <FaCaretDown
             className={`${

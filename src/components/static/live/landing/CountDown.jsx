@@ -52,7 +52,7 @@ const Countdown = () => {
             <p className="text-sm lg:text-xl">{text}</p>
           </div>
           <p
-            key={index + ":"}
+            key={index.toString() + ":"}
             className="last:hidden flex items-center justify-center"
           >
             :
