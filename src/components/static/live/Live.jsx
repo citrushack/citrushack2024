@@ -3,7 +3,7 @@ import Sponsors from "./Sponsors/Sponsors";
 import Team from "./Team/Team";
 import About from "./about/About";
 import FAQ from "./faq/FAQ";
-import Footer from "./footer/footer";
+import Footer from "./footer/Footer";
 import Judges from "./judges/Judges";
 import Landing from "./landing/Landing";
 import Schedule from "./schedule/Schedule";
