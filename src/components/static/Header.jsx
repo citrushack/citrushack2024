@@ -9,9 +9,9 @@ const Header = ({ text, color }) => {
           : color === "black"
           ? "text-citrus-black"
           : ""
-      } text-5xl flex items-center font-archivo font-black gap-3`}
+      } text-2xl md:text-5xl flex items-center font-archivo font-black gap-3 underline`}
     >
-      <PiTagSimpleFill className="" />
+      <PiTagSimpleFill />
       {text}
       <PiTagSimpleFill className="rotate-180" />
     </div>
