@@ -1,4 +1,5 @@
 import Involved from "./Involved/Involved";
+import Sponsors from "./Sponsors/Sponsors";
 import About from "./about/About";
 import Landing from "./landing/Landing";
 import Schedule from "./schedule/Schedule";
@@ -12,6 +13,7 @@ const Live = () => {
       <Schedule />
       <Tracks />
       <Involved />
+      <Sponsors />
     </div>
   );
 };
