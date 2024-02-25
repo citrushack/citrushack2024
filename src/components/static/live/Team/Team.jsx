@@ -5,6 +5,7 @@ import Corners from "../../Corners";
 import Image from "next/image";
 import flag from "@/public/svg/team/flag.svg";
 import light from "@/public/svg/team/light.svg";
+import cono from "@/public/svg/team/cono.svg";
 
 const Team = () => {
   return (
@@ -46,25 +47,39 @@ const Team = () => {
           </div>
         ))}
       </div>
-      <div className="bg-citrus-black w-full items-center justify-center flex flex-col py-8 mt-8">
+      <div className="bg-citrus-black w-full items-center justify-center flex flex-col py-8 mt-8 relative">
+        <Image
+          src={light}
+          alt="light"
+          className="absolute right-4 -translate-y-[80%] top-0 hidden md:block z-0"
+        />
+
         <Header text="Committees" color="white" />
-        <div className="flex flex-wrap w-10/12 text-white items-start justify-evenly">
-          {Object.entries(COMMITTEE).map(([committee, list], index) => (
-            <div
-              key={index}
-              className="w-1/3 lg:w-1/6 flex flex-col items-center justify-center"
-            >
-              <div className="text-base md:text-2xl my-6">{committee}</div>
-              {list.map((name, index2) => (
-                <div
-                  className="text-xs md:text-xl font-extralight"
-                  key={index2}
-                >
-                  {name}
-                </div>
-              ))}
-            </div>
-          ))}
+        <div className="flex items-center justify-evenly w-full">
+          <Image
+            src={cono}
+            alt="cono"
+            className="w-1/6 md:w-1/12 rotate-[-120deg]"
+          />
+          <div className="flex flex-wrap w-7/12 md:w-9/12 text-white items-start justify-evenly">
+            {Object.entries(COMMITTEE).map(([committee, list], index) => (
+              <div
+                key={index}
+                className="w-1/3 lg:w-1/6 flex flex-col items-center justify-center"
+              >
+                <div className="text-base md:text-2xl my-6">{committee}</div>
+                {list.map((name, index2) => (
+                  <div
+                    className="text-xs md:text-xl font-extralight"
+                    key={index2}
+                  >
+                    {name}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+          <Image src={cono} alt="cono" className="w-1/6 md:w-1/12" />
         </div>
       </div>
     </div>
