@@ -33,7 +33,7 @@ const Event = ({ event }) => {
         } py-2 relative w-full grid grid-cols-12 items-center justify-center border-t border-black`}
       >
         <div
-          className={`col-span-3 md:col-span-1 font-bold h-full flex flex-col items-center justify-center text-center text-sm md:text-xl`}
+          className={`col-span-3 md:col-span-1 font-bold h-full flex flex-col items-center justify-center text-center text-xs md:text-xl`}
         >
           {event.start.getHours() === 12 ? 12 : event.start.getHours() % 12}:
           {event.start.getMinutes() < 10 && "0"}
@@ -41,7 +41,7 @@ const Event = ({ event }) => {
           {event.start.getHours() >= 12 ? "PM " : "AM "}
         </div>
         <div
-          className={`col-span-5 md:col-span-2 px-2 items-center justify-center text-center font-advent text-base md:text-xl flex h-full font-bold`}
+          className={`col-span-5 md:col-span-2 px-2 items-center justify-center text-center font-advent text-sm md:text-xl flex h-full font-bold`}
         >
           {event.summary}
         </div>

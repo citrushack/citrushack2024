@@ -46,8 +46,8 @@ const Schedule = () => {
         <Header text="Schedule" color="white" />
       </div>
       <div className="flex w-11/12 items-stretch justify-evenly">
-        <div className="bg-[url('/svg/schedule/tire.svg')] w-[5%] bg-repeat-y mr-8 bg-contain" />
-        <div className="flex flex-col items-center justify-center w-11/12 md:w-9/12 my-12">
+        <div className="bg-[url('/svg/schedule/tire.svg')] w-[5%] bg-repeat-y bg-contain" />
+        <div className="flex flex-col items-center justify-center w-10/12 md:w-9/12 my-12">
           <div className="flex font-archivo w-full mb-8">
             {dates
               .filter((date) => events.some((event) => event.day === date))
@@ -70,7 +70,7 @@ const Schedule = () => {
               <Event event={event} key={index} />
             ))}
         </div>
-        <div className="bg-[url('/svg/schedule/tire.svg')] w-[5%] bg-repeat-y ml-8 bg-contain" />
+        <div className="bg-[url('/svg/schedule/tire.svg')] w-[5%] bg-repeat-y bg-contain" />
       </div>
     </div>
   );
