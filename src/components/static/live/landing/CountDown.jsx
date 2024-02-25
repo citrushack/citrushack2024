@@ -38,7 +38,7 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-7 text-5xl items-start justify-center">
+    <div className="grid grid-cols-7 text-2xl lg:text-5xl items-start justify-center">
       {Object.entries(time).map(([text, value], index) => (
         <>
           <div className="flex flex-col items-center justify-center gap-2">
@@ -46,7 +46,7 @@ const Countdown = () => {
               {parseInt(value / 10)}
               {value % 10}
             </p>
-            <p className="text-xl" key={index}>
+            <p className="text-sm lg:text-xl" key={index}>
               {text}
             </p>
           </div>
