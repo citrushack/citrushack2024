@@ -1,15 +1,19 @@
-import { COLORS } from "@/data/static/colors";
-const Header = ({ text, color, shadow }) => {
+import { PiTagSimpleFill } from "react-icons/pi";
+
+const Header = ({ text, color }) => {
   return (
     <div
-      className={`${COLORS[shadow].text} ${COLORS[color].border} w-8/12 text-8xl font-racing relative border-b-[6px] pb-2`}
+      className={`${
+        color === "white"
+          ? "text-white"
+          : color === "black"
+          ? "text-citrus-black"
+          : ""
+      } text-5xl flex items-center font-archivo font-black gap-3`}
     >
+      <PiTagSimpleFill className="" />
       {text}
-      <div
-        className={`text-5xl pb-2 text-black absolute bottom-0 border-b-[10px] pr-5 ${COLORS[color].border}`}
-      >
-        {text}
-      </div>
+      <PiTagSimpleFill className="rotate-180" />
     </div>
   );
 };

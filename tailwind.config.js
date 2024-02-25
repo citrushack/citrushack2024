@@ -23,12 +23,14 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
+        archivo: ["var(--font-archivo)"],
       },
       colors: {
         citrus: {
           beige: "#FFF8EA",
           orange: "#FD9006",
           black: "#312C32",
+          blue: "#5798FB",
         },
         hackathon: {
           "blue-100": "#38A3A5",
