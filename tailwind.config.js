@@ -23,20 +23,12 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
-        racing: ["var(--font-racing)", "sans-serif"],
       },
       colors: {
         citrus: {
-          "gray-100": "#A7A7A7",
-          "gray-200": "#3E3E3E",
-          "beige-100": "#FFF8EA",
-          "beige-200": "#F5E9CF",
-          orange: "#FF753A",
-          "green-200": "#30503D",
-          "green-100": "#8AB8AB",
-          red: "#E13636",
-          yellow: "#FFB800",
-          teal: "#00F3D6",
+          beige: "#FFF8EA",
+          orange: "#FD9006",
+          black: "#312C32",
         },
         hackathon: {
           "blue-100": "#38A3A5",
