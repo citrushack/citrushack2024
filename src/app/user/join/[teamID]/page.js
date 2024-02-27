@@ -65,7 +65,7 @@ export default function page({ params }) {
           {team.members.map((member, index) => (
             <p className="pl-3 m-0 flex items-center" key={index}>
               {member.name}
-              <span className="ml-3 text-sm text-hackathon-green-300">
+              <span className="ml-3 text-sm text-citrus-orange">
                 {member.email}
               </span>
             </p>
