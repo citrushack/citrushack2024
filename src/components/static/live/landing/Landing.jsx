@@ -23,7 +23,7 @@ const Landing = () => {
         </div>
       </div>
       <div className="text-2xl md:text-3xl lg:text-5xl text-citrus-orange font-bold mb-4 text-right">
-        See you at the endl;!
+        See you at the end;
       </div>
       <div className="flex flex-col lg:flex-row w-10/12 justify-between gap-2">
         <Button text="Participate" link="/form/participant" />
