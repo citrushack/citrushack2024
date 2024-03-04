@@ -1,6 +1,6 @@
 export const COLORS = {
   green: {
-    bg: "bg-hackathon-green-300",
+    bg: "bg-citrus-orange",
     text: "text-gray-800",
     border: "border-0",
   },

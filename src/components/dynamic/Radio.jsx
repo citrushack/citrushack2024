@@ -40,7 +40,7 @@ const Radio = ({
                   data-cy={`radio-button-${option}`}
                   className={`rounded-full w-full aspect-square duration-100 ${
                     user[field] === option || user[field] === optionKey
-                      ? "bg-hackathon-green-300"
+                      ? "bg-citrus-orange"
                       : "bg-transparent"
                   }`}
                 />

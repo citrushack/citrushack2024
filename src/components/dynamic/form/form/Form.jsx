@@ -32,10 +32,10 @@ const Form = ({
         />
       </div>
       <div className="w-10/12 md:w-1/2 xl:w-1/3 my-5 ">
-        <p className="text-xl bg-hackathon-green-300 font-semibold px-4 py-2 rounded-t-xl m-0">
+        <p className="text-xl bg-citrus-orange text-white font-semibold px-4 py-2 rounded-t-xl m-0">
           {header}
         </p>
-        <div className="rounded-b-xl bg-white p-3">
+        <div className="rounded-b-xl bg-citrus-gray p-3">
           <div className="grid grid-cols-1 gap-3">
             {state === 0 ? (
               <Status object={object} statuses={statuses} setState={setState} />
