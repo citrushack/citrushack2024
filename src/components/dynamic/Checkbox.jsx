@@ -16,10 +16,17 @@ const Checkbox = ({
       <div
         data-cy="checkbox-bg"
         className={`w-4 h-4 rounded-sm mr-4 ${
-          toggle ? "bg-citrus-orange" : "bg-white"
+          toggle
+            ? `${color ? color : "bg-hackathon-blue-100"}`
+            : "bg-hackathon-gray-100"
         } flex items-center justify-center`}
       >
-        <BsCheckLg data-cy="checkmark" className="text-white text-lg" />
+        <BsCheckLg
+          data-cy="checkmark"
+          className={`${
+            toggle ? "text-white" : "text-hackathon-gray-100"
+          } text-lg`}
+        />
       </div>
       {text && <p className="my-0 pt-0">{text}</p>}
     </div>

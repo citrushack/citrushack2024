@@ -17,7 +17,7 @@ describe("committee Select", () => {
     committees.forEach((committee) => {
       cy.get(`[data-cy="${committee.uid}"]`).should(
         "have.class",
-        "bg-citrus-orange/30"
+        "bg-green-100"
       );
     });
   });
@@ -33,13 +33,10 @@ describe("committee Select", () => {
       if (index < 5)
         cy.get(`[data-cy="${committee.uid}"]`).should(
           "have.class",
-          "bg-citrus-orange/30"
+          "bg-green-100"
         );
       else
-        cy.get(`[data-cy="${committee.uid}"]`).should(
-          "have.class",
-          "bg-citrus-gray"
-        );
+        cy.get(`[data-cy="${committee.uid}"]`).should("have.class", "bg-white");
     });
   });
 });

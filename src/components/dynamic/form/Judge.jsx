@@ -5,7 +5,7 @@ import Form from "@/components/dynamic/form/form/Form.jsx";
 import { FIELDS, ATTRIBUTES } from "@/data/dynamic/form/Judge.js";
 import { useSession } from "next-auth/react";
 import { api } from "@/utils/api";
-import toast from "react-hot-toast";
+import toaster from "@/utils/toaster";
 import { STATUSES } from "@/data/dynamic/admin/Judges.js";
 
 const Judge = () => {
@@ -15,6 +15,7 @@ const Judge = () => {
     name: session.user.name,
     email: session.user.email,
     roles: session.user.roles,
+    photo: session.user.photo ?? null,
     form: "judges",
   });
 
@@ -24,8 +25,8 @@ const Judge = () => {
       url: "/api/dashboard/judges",
       body: judge,
     })
-      .then(() => toast(`✅ Submitted successfully!`))
-      .catch(() => toast(`❌ Internal Server Error`))
+      .then(() => toaster(`Submitted successfully!`, "success"))
+      .catch(() => toaster(`Internal Server Error`, "error"))
       .finally(() => {
         setLoading(false);
         setState(2);

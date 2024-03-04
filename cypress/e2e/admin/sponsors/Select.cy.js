@@ -15,10 +15,7 @@ describe("Sponsors Select", () => {
   it("Select All", () => {
     cy.get('[data-cy="header"]').find('[data-cy="checkbox"]').click();
     sponsors.forEach((sponsor) => {
-      cy.get(`[data-cy="${sponsor.uid}"]`).should(
-        "have.class",
-        "bg-citrus-orange/30"
-      );
+      cy.get(`[data-cy="${sponsor.uid}"]`).should("have.class", "bg-green-100");
     });
   });
 
@@ -30,13 +27,10 @@ describe("Sponsors Select", () => {
       if (index < 5)
         cy.get(`[data-cy="${sponsor.uid}"]`).should(
           "have.class",
-          "bg-citrus-orange/30"
+          "bg-green-100"
         );
       else
-        cy.get(`[data-cy="${sponsor.uid}"]`).should(
-          "have.class",
-          "bg-citrus-gray"
-        );
+        cy.get(`[data-cy="${sponsor.uid}"]`).should("have.class", "bg-white");
     });
   });
 });
