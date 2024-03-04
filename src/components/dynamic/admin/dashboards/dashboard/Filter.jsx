@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { TiPlus } from "react-icons/ti";
 
 const Filter = ({ value, status, isActive, setFilters }) => {
@@ -28,7 +29,9 @@ const Filter = ({ value, status, isActive, setFilters }) => {
     <div className="flex justify-center" onClick={onClick}>
       <div
         className={`rounded hover:opacity-70 duration-300 ${
-          isActive ? "text-white bg-black" : "text-black bg-white"
+          isActive
+            ? "text-white bg-hackathon-blue-100"
+            : "text-hackathon-blue-100 bg-white"
         } cursor-pointer flex items-center justify-between w-full`}
         data-cy={status + "-filter"}
       >
@@ -43,4 +46,4 @@ const Filter = ({ value, status, isActive, setFilters }) => {
   );
 };
 
-export default Filter;
+export default memo(Filter);

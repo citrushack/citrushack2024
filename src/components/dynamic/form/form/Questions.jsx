@@ -5,10 +5,11 @@ import Input from "@/components/dynamic/Input";
 import Button from "@/components/dynamic/Button.jsx";
 import Textarea from "@/components/dynamic/form/form/Textarea.jsx";
 import Upload from "@/components/dynamic/form/form/Upload";
-import toast from "react-hot-toast";
+import toaster from "@/utils/toaster";
 import Link from "next/link";
 import { FaLink } from "react-icons/fa";
 import { CONFIG } from "@/data/Config";
+import Terms from "./Terms";
 
 const Questions = ({
   fields,
@@ -25,10 +26,14 @@ const Questions = ({
 
     if (
       Object.entries(fields).some(
-        ([key, value]) => value.required && (!object[key] || object[key] === "")
+        ([key, value]) =>
+          value.required &&
+          (!object[key] ||
+            object[key] === "" ||
+            object[key].includes("Invalid"))
       )
     ) {
-      toast("❌ Please complete all required fields!");
+      toaster("Please complete all required fields!", "error");
       setLoading(false);
       return;
     }
@@ -38,12 +43,12 @@ const Questions = ({
         (requirement) => !object.requirements.includes(requirement)
       )
     ) {
-      toast("❌ Please agree to all the terms!");
+      toaster("Please agree to all the terms!", "error");
       setLoading(false);
       return;
     }
     if (fields.availability && object.availability.length === 0) {
-      toast("❌ Please select at least one available time!");
+      toaster("Please select at least one available time!", "error");
       setLoading(false);
       return;
     }
@@ -52,7 +57,7 @@ const Questions = ({
   };
 
   return (
-    <div>
+    <div className="flex flex-col w-full gap-5">
       {Object.values(fields).map((field, index) => (
         <div key={index}>
           {field.input === "description" &&
@@ -80,6 +85,7 @@ const Questions = ({
               setUser={setObject}
               required={field.required}
               editable={field.editable}
+              regex={field.regex}
             />
           )}
           {field.input === "select" && (
@@ -113,10 +119,25 @@ const Questions = ({
                         : [...object[field.field], option],
                     })
                   }
-                  color="bg-citrus-orange"
+                  color="bg-hackathon-green-300"
                 />
               ))}
             </>
+          )}
+          {field.input === "terms" && (
+            <Terms
+              options={field.options}
+              toggle={object[field.field].length === field.options.length}
+              onClick={() => {
+                setObject({
+                  ...object,
+                  [field.field]:
+                    object[field.field].length === field.options.length
+                      ? []
+                      : [...field.options],
+                });
+              }}
+            />
           )}
           {field.input === "radio" && (
             <Radio
@@ -153,11 +174,11 @@ const Questions = ({
           )}
         </div>
       ))}
-      <div className="font-semibold">Resources</div>
+      <p className="font-semibold mt-3">Resources</p>
       <Link
         href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
         target="_blank"
-        className="no-underline flex items-center text-citrus-orange"
+        className="no-underline flex items-center text-hackathon-green-300"
       >
         MLH Code of Conduct
         <FaLink className="mx-2" />
