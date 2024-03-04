@@ -15,7 +15,10 @@ describe("Mentor Select", () => {
   it("Select All", () => {
     cy.get('[data-cy="header"]').find('[data-cy="checkbox"]').click();
     mentors.forEach((mentor) => {
-      cy.get(`[data-cy="${mentor.uid}"]`).should("have.class", "bg-green-100");
+      cy.get(`[data-cy="${mentor.uid}"]`).should(
+        "have.class",
+        "bg-citrus-orange/30"
+      );
     });
   });
 
@@ -27,9 +30,13 @@ describe("Mentor Select", () => {
       if (index < 5)
         cy.get(`[data-cy="${mentor.uid}"]`).should(
           "have.class",
-          "bg-green-100"
+          "bg-citrus-orange/30"
         );
-      else cy.get(`[data-cy="${mentor.uid}"]`).should("have.class", "bg-white");
+      else
+        cy.get(`[data-cy="${mentor.uid}"]`).should(
+          "have.class",
+          "bg-citrus-gray"
+        );
     });
   });
 });

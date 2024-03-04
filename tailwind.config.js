@@ -7,36 +7,32 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        rolling: "rolling 20s linear infinite",
-        "rolling-reverse": "rolling-reverse 20s linear infinite",
-      },
       keyframes: {
-        rolling: {
+        marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
         },
-        "rolling-reverse": {
-          "0%": { transform: "translateX(-100%)" },
+        "marquee-continuation": {
+          "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0%)" },
         },
       },
+      animation: {
+        marquee: "marquee 30s linear infinite",
+        "marquee-continuation": "marquee-continuation 30s linear infinite",
+      },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
-        racing: ["var(--font-racing)", "sans-serif"],
+        archivo: ["var(--font-archivo)"],
       },
       colors: {
         citrus: {
-          "gray-100": "#A7A7A7",
-          "gray-200": "#3E3E3E",
-          "beige-100": "#FFF8EA",
-          "beige-200": "#F5E9CF",
-          orange: "#FF753A",
-          "green-200": "#30503D",
-          "green-100": "#8AB8AB",
-          red: "#E13636",
-          yellow: "#FFB800",
-          teal: "#00F3D6",
+          beige: "#FFF8EA",
+          orange: "#FD9006",
+          black: "#312C32",
+          blue: "#5798FB",
+          gray: "#E1E3DE",
+          yellow: "#FFAF38",
         },
         hackathon: {
           "blue-100": "#38A3A5",
