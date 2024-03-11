@@ -1,7 +1,7 @@
 import Button from "../Button";
 import Input from "../Input";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
+import toaster from "@/utils/toaster";
 import Loading from "../Loading";
 import { BiLink, BiSolidCopy } from "react-icons/bi";
 import { api } from "@/utils/api";
@@ -17,14 +17,14 @@ const Team = ({ user, setUser }) => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(user.team);
-    toast("✅ Successfully copied team id!");
+    toaster("Successfully copied team id!", "success");
   };
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(
       `${process.env.NEXT_PUBLIC_URL}user/join/${user.team}`
     );
-    toast("✅ Successfully copied join link!");
+    toaster("Successfully copied join link!", "success");
   };
 
   const handleLeave = () => {
@@ -32,7 +32,7 @@ const Team = ({ user, setUser }) => {
       method: "DELETE",
       url: "/api/members",
     }).then(() => {
-      toast("✅ Successfully left team!");
+      toaster("Successfully left team!", "success");
       setTeam(defaultTeam);
       setUser({ ...user, team: null });
       setLoad(false);
@@ -41,7 +41,7 @@ const Team = ({ user, setUser }) => {
 
   const handleJoin = () => {
     if (team.id === "") {
-      toast("❌ Enter a Valid Team ID");
+      toaster("Enter a Valid Team ID", "error");
       return;
     }
     api({
@@ -50,17 +50,17 @@ const Team = ({ user, setUser }) => {
       body: { team: team.id },
     }).then((response) => {
       if (response.message !== "OK") {
-        toast(`❌ ${response.message}`);
+        toaster(`${response.message}`, "error");
         return;
       }
-      toast("✅ Successfully joined team!");
+      toaster("Successfully joined team!", "success");
       setUser({ ...user, team: team.id });
     });
   };
 
   const handleCreate = () => {
     if (team.name === "") {
-      toast("❌ Enter a Valid Team Name");
+      toaster("Enter a Valid Team Name", "error");
       return;
     }
     api({
@@ -70,7 +70,7 @@ const Team = ({ user, setUser }) => {
     }).then(({ items }) => {
       setTeam(items);
       setUser({ ...user, team: items.id });
-      toast("✅ Successfully created a new team!");
+      toaster("Successfully created a new team!", "success");
       setEdit(false);
       setLoad(true);
     });
@@ -82,15 +82,15 @@ const Team = ({ user, setUser }) => {
 
   const handleSave = () => {
     if (!(team.github === "" || team.github.includes("github.com/"))) {
-      toast("❌ Invalid Github Link");
+      toaster("Invalid Github Link", "error");
       return;
     }
     if (!(team.devpost === "" || team.devpost.includes("devpost.com/"))) {
-      toast("❌ Invalid Devpost Link");
+      toaster("Invalid Devpost Link", "error");
       return;
     }
     if (!(team.figma === "" || team.figma.includes("figma.com/"))) {
-      toast("❌ Invalid Figma Link");
+      toaster("Invalid Figma Link", "error");
       return;
     }
 
@@ -99,7 +99,7 @@ const Team = ({ user, setUser }) => {
       url: "/api/team",
       body: team,
     }).then(() => {
-      toast("✅ Successfully Updated!");
+      toaster("Successfully Updated!", "success");
       setEdit(false);
     });
   };
@@ -115,14 +115,15 @@ const Team = ({ user, setUser }) => {
           setLoad(true);
         })
         .catch(({ response: data }) => {
-          if (data.message === "Invalid Team ID") toast("❌ Invalid Team ID");
-          else toast("❌ Internal Server Error");
+          if (data.message === "Invalid Team ID")
+            toaster("Invalid Team ID", "error");
+          else toaster("Internal Server Error", "error");
         });
     }
   }, [user.team]);
 
   return (
-    <div className="bg-citrus-gray rounded-lg p-4 gap-3 m-2 overflow-scroll max-h-[70vh] flex flex-col justify-start">
+    <div className="bg-white rounded-lg p-4 gap-3 m-2 overflow-scroll max-h-[70vh] flex flex-col justify-start">
       {user.team && !load && <Loading />}
       {user.team && load && (
         <>
@@ -171,7 +172,7 @@ const Team = ({ user, setUser }) => {
             {team.members.map((member, index) => (
               <p className="pl-3 m-0 flex items-center" key={index}>
                 {member.name}
-                <span className="ml-3 text-sm text-citrus-orange">
+                <span className="ml-3 text-sm text-hackathon-green-300">
                   {member.email}
                 </span>
               </p>
@@ -179,18 +180,18 @@ const Team = ({ user, setUser }) => {
           </div>
           <div className="mt-3 pt-2 flex-grow">
             <p className="mb-1 font-semibold">Team ID</p>
-            <div className="text-citrus-orange">
+            <div className="text-hackathon-green-300">
               share this team ID or join link to your teammates
             </div>
             <p className="pl-3 mb-0 flex items-center">
               {user.team}
               <BiSolidCopy
                 onClick={handleCopy}
-                className="text-lg text-gray-400 ml-2 hover:cursor-pointer hover:text-citrus-orange"
+                className="text-lg text-gray-400 ml-2 hover:cursor-pointer hover:text-hackathon-blue-100"
               />
               <BiLink
                 onClick={handleCopyLink}
-                className="text-lg text-gray-400 ml-2 hover:cursor-pointer hover:text-citrus-orange"
+                className="text-lg text-gray-400 ml-2 hover:cursor-pointer hover:text-hackathon-blue-100"
               />
             </p>
           </div>
@@ -208,7 +209,7 @@ const Team = ({ user, setUser }) => {
       {!user.team && team && (
         <div className="flex flex-col justify-start h-full gap-5">
           <div className="">
-            <div className="text-citrus-orange">
+            <div className="text-hackathon-green-300">
               Ask your teammates to share team ID or join link with you to join
               the team
             </div>
@@ -225,7 +226,7 @@ const Team = ({ user, setUser }) => {
             <Button color="green" size="lg" text="join" onClick={handleJoin} />
           </div>
           <div className="">
-            <div className="text-citrus-orange">
+            <div className="text-hackathon-green-300">
               Type a team name to create a new team
             </div>
             <Input

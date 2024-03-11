@@ -7,6 +7,7 @@ import {
   FaSortAlphaDown,
   FaSortAlphaUp,
 } from "react-icons/fa";
+import Loading from "@/components/dynamic/Loading";
 
 const Table = ({
   getHeaderGroups,
@@ -19,12 +20,13 @@ const Table = ({
   getPageCount,
   Dropdown,
   empty,
+  loading,
 }) => {
   return (
     <>
       <div className="bg-white h-[75vh] overflow-y-scroll flex flex-col justify-between">
         <div>
-          <div className="text-white bg-citrus-orange rounded-t-lg">
+          <div className="text-white bg-hackathon-blue-200 rounded-t-lg">
             {getHeaderGroups().map(({ headers, id }) => (
               <div key={id} className="flex items-center px-3 py-2">
                 {headers.map(({ id, column, getContext }) => (
@@ -36,7 +38,7 @@ const Table = ({
                     {flexRender(column.columnDef.header, getContext())}
                     {column.getCanSort() && (
                       <FaArrowRightArrowLeft
-                        className={`mx-2 rotate-90 hover:cursor-pointer ${
+                        className={`mx-2 rotate-90 hover:cursor-pointer text-hackathon-gray-200 ${
                           column.getIsSorted() && "hidden"
                         }`}
                         data-cy={`${column.id}-sorting`}
@@ -47,14 +49,14 @@ const Table = ({
                       <FaSortAlphaDown
                         onClick={column.getToggleSortingHandler()}
                         data-cy={`${column.id}-sorting-desc`}
-                        className="mx-2 hover:cursor-pointer text-citrus-orange"
+                        className="mx-2 hover:cursor-pointer text-white"
                       />
                     )}
                     {column.getIsSorted() === "desc" && (
                       <FaSortAlphaUp
                         onClick={column.getToggleSortingHandler()}
                         data-cy={`${column.columnDef.header}-sorting-asc`}
-                        className="mx-2 hover:cursor-pointer text-citrus-orange"
+                        className="mx-2 hover:cursor-pointer text-white"
                       />
                     )}
                   </div>
@@ -63,24 +65,30 @@ const Table = ({
             ))}
           </div>
           <>
-            {getRowModel().rows.length === 0 && (
-              <p className="w-full text-center py-8 bg-citrus-gray">{empty}</p>
-            )}
-            {getRowModel().rows.map(
-              ({ id, getVisibleCells, original, getIsSelected }) => (
-                <Body
-                  getIsSelected={getIsSelected}
-                  key={id}
-                  getVisibleCells={getVisibleCells}
-                  Dropdown={Dropdown}
-                  original={original}
-                />
-              )
+            {loading ? (
+              <Loading />
+            ) : (
+              <>
+                {getRowModel().rows.length === 0 && (
+                  <p className="w-full text-center py-8 bg-white">{empty}</p>
+                )}
+                {getRowModel().rows.map(
+                  ({ id, getVisibleCells, original, getIsSelected }) => (
+                    <Body
+                      getIsSelected={getIsSelected}
+                      key={id}
+                      getVisibleCells={getVisibleCells}
+                      Dropdown={Dropdown}
+                      original={original}
+                    />
+                  )
+                )}
+              </>
             )}
           </>
         </div>
       </div>
-      <div className="flex justify-end items-center p-4 text-lg bg-citrus-gray w-full rounded-b-lg">
+      <div className="flex justify-end items-center p-4 text-lg bg-white w-full rounded-b-lg">
         <div className="mx-2">{getRowModel().rows.length} row(s)</div>
         <button
           onClick={() => previousPage()}

@@ -7,18 +7,18 @@ export const INVOLVED = {
     icon: <ImKey2 />,
     link: "/form/mentor",
     describtion:
-      "Not interested in hacking but still want to participate? Great! We would love to have you on board. ",
+      "Apply now to share your knowledge as a passionate coder, engineer, or aspiring industry professional!",
   },
   Sponsor: {
     icon: <FiGift />,
     link: "/form/sponsor",
     describtion:
-      "Not interested in hacking but still want to participate? Great! We would love to have you on board. ",
+      "Elevate your brand and support innovation by sponsoring Citrus Hack 2024!  Empower the next generation of tech leaders.",
   },
   Volunteer: {
     icon: <BiSolidPackage />,
     link: "/form/volunteer",
     describtion:
-      "Not interested in hacking but still want to participate? Great! We would love to have you on board. ",
+      "Become the driving force behind groundbreaking ideas! Citrus Hack is calling on volunteers for an unforgettable experience.",
   },
 };
