@@ -19,6 +19,10 @@ export const COLORS = {
     text: "text-white",
     border: "border-0",
   },
+  orange: {
+    bg: "bg-citrus-orange",
+    text: "text-black",
+  },
 };
 export const SIZES = {
   xs: "text-xs",

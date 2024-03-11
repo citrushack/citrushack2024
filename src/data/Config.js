@@ -16,12 +16,12 @@ export const MANIFEST = {
 };
 
 export const METADATA = {
-  name: "HACKATHON_NAME",
-  description: "DESCRIPTION",
-  length: "HACKATHON_LENGTH",
-  date: "HACKATHON_DATE",
+  name: "Citrushack 2024",
+  description: "",
+  length: "36 hours",
+  date: "May 17th - 19th",
 };
 
 export const SITEMAP = {
-  domain: "https://www.placeholder.com",
+  domain: "https://www.citrushack.com",
 };

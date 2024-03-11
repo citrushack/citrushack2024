@@ -119,7 +119,7 @@ const Questions = ({
                         : [...object[field.field], option],
                     })
                   }
-                  color="bg-hackathon-green-300"
+                  color="bg-citrus-orange"
                 />
               ))}
             </>
@@ -178,7 +178,7 @@ const Questions = ({
       <Link
         href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
         target="_blank"
-        className="no-underline flex items-center text-hackathon-green-300"
+        className="no-underline flex items-center text-citrus-orange"
       >
         MLH Code of Conduct
         <FaLink className="mx-2" />
@@ -199,7 +199,7 @@ const Questions = ({
           text="Submit"
           onClick={handleSubmit}
           loading={loading}
-          color="green"
+          color="orange"
         />
       </div>
     </div>
