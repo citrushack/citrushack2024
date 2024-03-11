@@ -17,7 +17,7 @@ describe("Participant Select", () => {
     participants.forEach((participant) => {
       cy.get(`[data-cy="${participant.uid}"]`).should(
         "have.class",
-        "bg-citrus-orange/30"
+        "bg-green-100"
       );
     });
   });
@@ -33,12 +33,12 @@ describe("Participant Select", () => {
       if (index < 5)
         cy.get(`[data-cy="${participant.uid}"]`).should(
           "have.class",
-          "bg-citrus-orange/30"
+          "bg-green-100"
         );
       else
         cy.get(`[data-cy="${participant.uid}"]`).should(
           "have.class",
-          "bg-citrus-gray"
+          "bg-white"
         );
     });
   });

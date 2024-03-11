@@ -32,11 +32,7 @@ describe("Mentor Select", () => {
           "have.class",
           "bg-citrus-orange/30"
         );
-      else
-        cy.get(`[data-cy="${judge.uid}"]`).should(
-          "have.class",
-          "bg-citrus-gray"
-        );
+      else cy.get(`[data-cy="${judge.uid}"]`).should("have.class", "bg-white");
     });
   });
 });
