@@ -1,3 +1,6 @@
+import { METADATA } from "@/data/Config";
+import { phone } from "@/data/dynamic/form/Regex";
+
 export const TIERS = {
   tier1: "Bronze",
   tier2: "Silver",
@@ -12,8 +15,8 @@ export const FIELDS = {
     input: "description",
     width: 12,
     texts: [
-      "Welcome to HACKATHON_NAME. Thank you for being on the Sponsorship team, we appreciate your efforts to help support HACKATHON_NAME. HACKATHON_NAME is a DESCRIPTION hackathon spanning HACKATHON_LENGTH on HACKATHON_DATE. ",
-      "By sponsoring HACKATHON_NAME, you help advocate for SPONSOR_REASONS.",
+      `Welcome to ${METADATA.name}. Thank you for being on the Sponsorship team, we appreciate your efforts to help support ${METADATA.name}. ${METADATA.name} is a ${METADATA.description} hackathon spanning ${METADATA.length} on ${METADATA.date}.`,
+      `By sponsoring ${METADATA.name}, you help advocate for SPONSOR_REASONS.`,
       "Sponsorship members are not required to stay the full duration of the event, but are encouraged to checkout the various events, workshops, and opportunities that are available.",
     ],
   },
@@ -46,6 +49,7 @@ export const FIELDS = {
     maxLength: 50,
     width: 12,
     required: true,
+    regex: phone,
   },
   company: {
     input: "input",
@@ -75,9 +79,9 @@ export const FIELDS = {
     width: 12,
     required: true,
   },
-  response: {
+  comments: {
     input: "textarea",
-    name: "response",
+    name: "comments",
     rows: 4,
     title: "Additional Comments/Questions",
     placeholder: "...",
@@ -86,7 +90,7 @@ export const FIELDS = {
   },
   requirements: {
     text: "Terms and Conditions",
-    input: "checkboxes",
+    input: "terms",
     width: 12,
     field: "requirements",
     options: [

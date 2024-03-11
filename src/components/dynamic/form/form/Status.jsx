@@ -23,7 +23,7 @@ const Status = ({ object, statuses, setState }) => {
         immediately.
       </p>
 
-      <Button text="Apply" onClick={() => setState(1)} color="green" />
+      <Button text="Apply" onClick={() => setState(1)} color="orange" />
     </div>
   );
 };

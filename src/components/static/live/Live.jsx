@@ -1,5 +1,5 @@
 import Involved from "./Involved/Involved";
-import Sponsors from "./Sponsors/Sponsors";
+// import Sponsors from "./Sponsors/Sponsors";
 // import Team from "./Team/Team";
 import About from "./about/About";
 import FAQ from "./faq/FAQ";
@@ -7,7 +7,7 @@ import Footer from "./footer/Footer";
 // import Judges from "./judges/Judges";
 import Landing from "./landing/Landing";
 // import Schedule from "./schedule/Schedule";
-import Tracks from "./tracks/Tracks";
+// import Tracks from "./tracks/Tracks";
 
 const Live = () => {
   return (
@@ -15,9 +15,9 @@ const Live = () => {
       <Landing />
       <About />
       {/* <Schedule /> */}
-      <Tracks />
+      {/* <Tracks /> */}
       <Involved />
-      <Sponsors />
+      {/* <Sponsors /> */}
       {/* <Team />
       <Judges /> */}
       <FAQ />

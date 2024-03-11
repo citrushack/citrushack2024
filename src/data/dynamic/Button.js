@@ -1,6 +1,6 @@
 export const COLORS = {
   green: {
-    bg: "bg-citrus-orange",
+    bg: "bg-hackathon-green-300",
     text: "text-gray-800",
     border: "border-0",
   },
@@ -18,6 +18,10 @@ export const COLORS = {
     bg: "bg-hackathon-tags-red-text",
     text: "text-white",
     border: "border-0",
+  },
+  orange: {
+    bg: "bg-citrus-orange",
+    text: "text-black",
   },
 };
 export const SIZES = {
