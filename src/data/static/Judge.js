@@ -1,4 +1,4 @@
-import placeholder from "@/public/board/placeholder.png";
+import placeholder from "@/public/board/placeholder.webp";
 export const JUDGES = [
   {
     name: "Adrian Castillo",
