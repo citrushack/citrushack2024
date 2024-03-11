@@ -13,7 +13,7 @@ const Table = ({ data }) => {
         .filter((group) => !group.hidden)
         .map(({ name, links, table, rounds }, index) => (
           <div key={index} className="flex justify-between items-start p-2">
-            <div className="bg-citrus-gray w-full p-3 rounded-xl">
+            <div className="bg-white w-full p-3 rounded-xl">
               <div className="flex justify-between items-center">
                 <Tag color={COLORS["grayblue"]} text={name} />
                 <div className="flex justify-start w-full ml-2">
@@ -25,14 +25,14 @@ const Table = ({ data }) => {
                           key={index}
                           href={link.link}
                           target="_blank"
-                          className="m-0 p-0 text-black no-underline hover:!text-citrus-orange  text-xl"
+                          className="m-0 p-0 text-black no-underline hover:!text-hackathon-blue-100 text-xl"
                         >
                           {ICONS[link.name]}
                         </Link>
                       ))}
                 </div>
                 {table && (
-                  <p className="mb-0 text-citrus-orange font-semibold whitespace-nowrap">
+                  <p className="mb-0 text-hackathon-green-300 font-semibold whitespace-nowrap">
                     table {table}
                   </p>
                 )}

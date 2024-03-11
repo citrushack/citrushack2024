@@ -1,7 +1,7 @@
 import Image from "next/image";
 import rayas from "@/public/svg/about/rayas.svg";
 import title from "@/public/svg/about/title.svg";
-import car from "@/public/svg/about/car.svg";
+// import car from "@/public/svg/about/car.svg";
 import { PiTagSimpleFill } from "react-icons/pi";
 import Corners from "../../Corners";
 
@@ -9,10 +9,10 @@ const About = () => {
   return (
     <div className="w-full relative">
       <Image src={rayas} />
-      <Image
+      {/* <Image
         src={car}
         className="w-full sm:w-1/2 absolute bottom-0 lg:-bottom-16 md:right-[20%] z-10"
-      />
+      /> */}
       <div className="w-full bg-citrus-black text-citrus-black py-10 flex items-center justify-center">
         <div className="w-11/12 rounded-[100px] bg-citrus-beige justify-between flex flex-col md:flex-row gap-8 px-8 py-12 pb-24 lg:pb-48">
           <Image src={title} />

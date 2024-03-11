@@ -11,10 +11,13 @@ import Mentors from "@/components/dynamic/admin/dashboards/Mentors";
 import Contacts from "@/components/dynamic/admin/services/contacts/Contacts";
 import Participants from "@/components/dynamic/admin/dashboards/Participants";
 import Sponsors from "@/components/dynamic/admin/dashboards/Sponsors";
+import Panelists from "@/components/dynamic/admin/dashboards/Panelists";
 import Statistics from "@/components/dynamic/admin/services/statistics/Statistics";
 import Teams from "@/components/dynamic/admin/dashboards/Teams";
 import Volunteers from "@/components/dynamic/admin/dashboards/Volunteers";
+import Leads from "@/components/dynamic/admin/dashboards/Leads";
 import Fault from "@/utils/error";
+import Settings from "@/components/dynamic/admin/services/settings/Settings";
 
 const Page = ({ params }) => {
   const components = {
@@ -29,10 +32,13 @@ const Page = ({ params }) => {
     mentors: <Mentors />,
     contacts: <Contacts />,
     participants: <Participants />,
+    settings: <Settings />,
     sponsors: <Sponsors />,
+    panelists: <Panelists />,
     statistics: <Statistics />,
     teams: <Teams />,
     volunteers: <Volunteers />,
+    leads: <Leads />,
   };
 
   const capitalizeFirstLetter = (word) => {
